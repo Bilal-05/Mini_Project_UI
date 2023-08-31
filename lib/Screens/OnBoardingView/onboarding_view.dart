@@ -12,8 +12,8 @@ class OnBoardingView extends StatefulWidget {
 }
 
 class _OnBoardingViewState extends State<OnBoardingView> {
-  List<String> ScreenNo = ["One", "Two"];
-  List<String> Images = [
+  List<String> screenNo = ["One", "Two"];
+  List<String> images = [
     "animations/shopping_phone.json",
     "animations/done_phone.json"
   ];
@@ -21,7 +21,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
   @override
   Widget build(BuildContext context) {
     return PageView.builder(
-      itemCount: ScreenNo.length,
+      itemCount: screenNo.length,
       itemBuilder: (BuildContext context, int index) {
         return Scaffold(
           backgroundColor: PrimaryColors.primary1,
@@ -39,7 +39,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                       child: Padding(
                         padding: const EdgeInsets.only(right: 6),
                         child: Text(
-                          "Your Holiday shopping delivered to Screen ${ScreenNo[index]}  🏕 ",
+                          "Your Holiday shopping delivered to Screen ${screenNo[index]}  🏕 ",
                           style: const TextStyle(
                               fontSize: 32,
                               fontWeight: FontWeight.w700,
@@ -71,17 +71,17 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                     child: currentpage == 0
                         ? row1()
                         : currentpage == 1
-                            ? Row2()
+                            ? row2()
                             : const Text("data"),
                   ),
                   Container(
-                    margin: EdgeInsets.symmetric(vertical: 30),
+                    margin: const EdgeInsets.symmetric(vertical: 30),
                     height: MediaQuery.of(context).size.height * 0.3,
                     width: MediaQuery.of(context).size.width * 0.7,
-                    child: Lottie.asset(Images[index]),
+                    child: Lottie.asset(images[index]),
                   ),
                   Container(
-                    margin: EdgeInsets.symmetric(horizontal: 20),
+                    margin: const EdgeInsets.symmetric(horizontal: 20),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: TextColors.textColor1,
@@ -92,9 +92,11 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                           ),
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/firstscreen');
+                      },
                       child: const Text(
-                        "Get Started    ➡",
+                        "Get Started →",
                         style: TextStyle(
                           fontSize: 16,
                           fontFamily: "Manrope",
@@ -149,7 +151,7 @@ Widget row1() {
   );
 }
 
-Widget Row2() {
+Widget row2() {
   return Row(
     mainAxisSize: MainAxisSize.min,
     children: [

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mini_project/Screens/MainMenuView/mainmenu_view.dart';
 import 'package:mini_project/Screens/OnBoardingView/onboarding_view.dart';
 
 void main() {
@@ -12,7 +13,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       initialRoute: '/',
-      routes: {'/': (context) => const OnBoardingView()},
+      routes: {
+        '/': (context) => const OnBoardingView(),
+        '/firstscreen': (context) => const MainMenuView(),
+      },
     );
   }
 }
