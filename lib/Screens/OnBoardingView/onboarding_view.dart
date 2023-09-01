@@ -69,9 +69,9 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                   ),
                   Container(
                     child: currentpage == 0
-                        ? row1()
+                        ? row2()
                         : currentpage == 1
-                            ? row2()
+                            ? row1()
                             : const Text("data"),
                   ),
                   Container(
