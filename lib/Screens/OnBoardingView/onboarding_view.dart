@@ -75,7 +75,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                             : const Text("data"),
                   ),
                   Container(
-                    margin: const EdgeInsets.symmetric(vertical: 30),
+                    margin: const EdgeInsets.symmetric(vertical: 20),
                     height: MediaQuery.of(context).size.height * 0.3,
                     width: MediaQuery.of(context).size.width * 0.7,
                     child: Lottie.asset(images[index]),
