@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:mini_project/Constants/Colors.dart';
 
@@ -28,19 +27,26 @@ class _SecondRowState extends State<SecondRow> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(left: 20, right: 20),
       child: TextField(
+        style: const TextStyle(color: TextColors.textColor1),
         decoration: InputDecoration(
-          hintText: "Search",
+          contentPadding:
+              const EdgeInsets.symmetric(vertical: 23, horizontal: 10),
+          filled: true,
+          hintText: "Search Products or store",
+          hintStyle: const TextStyle(color: TextColors.textColor1),
+          prefixIconColor: TextColors.textColor1,
           prefixIcon: const Icon(Icons.search_sharp),
-          fillColor: Colors.white,
+          fillColor: PrimaryColors.primary2,
           enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(22),
+            borderRadius: BorderRadius.circular(28),
+            borderSide:
+                const BorderSide(color: PrimaryColors.primary1, width: 3),
           ),
           focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(22),
+            borderRadius: BorderRadius.circular(28),
             borderSide:
-                const BorderSide(color: PrimaryColors.primary2, width: 3),
+                const BorderSide(color: PrimaryColors.primary1, width: 3),
           ),
         ),
         controller: HomeController,

@@ -16,19 +16,24 @@ class _FirstContainerState extends State<FirstContainer> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.3,
+      height: MediaQuery.of(context).size.height * 0.4,
       color: PrimaryColors.primary1,
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Container(
-            margin: const EdgeInsets.only(left: 20, right: 20),
-            child: FirstRow(itemNumber: Cart.inCart.length),
-          ),
-          const SecondRow(),
-          const ThirdRow()
-        ],
+      child: Container(
+        margin: EdgeInsets.symmetric(horizontal: 20),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Container(
+                margin: const EdgeInsets.only(top: 52),
+                child: FirstRow(itemNumber: Cart.inCart.length)),
+            Container(
+                margin: const EdgeInsets.only(top: 20),
+                child: const SecondRow()),
+            Container(
+                margin: const EdgeInsets.only(top: 20), child: const ThirdRow())
+          ],
+        ),
       ),
     );
   }

@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mini_project/Constants/colors.dart';
+import 'package:mini_project/DataBases/InCart.dart';
 
-class FirstRow extends StatelessWidget {
+class FirstRow extends StatefulWidget {
   final int itemNumber;
   const FirstRow({super.key, required this.itemNumber});
+
+  @override
+  State<FirstRow> createState() => _FirstRowState();
+}
+
+class _FirstRowState extends State<FirstRow> {
+  get itemNumber => Cart.inCart.length;
 
   @override
   Widget build(BuildContext context) {
