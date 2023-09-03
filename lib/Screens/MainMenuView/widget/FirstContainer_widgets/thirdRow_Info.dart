@@ -15,6 +15,7 @@ class _ThirdRowState extends State<ThirdRow> {
     '2 Hours',
     '3 Hours',
   ];
+
   String? selectedValue;
 
   @override
@@ -36,12 +37,15 @@ class _ThirdRowState extends State<ThirdRow> {
                       color: TextColors.textColor1),
                 ),
               ),
-              Text(
-                "Green Way 3000, Sylhet",
-                style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w500,
-                    color: TextColors.textColor1),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 10.0),
+                child: Text(
+                  "Green Way 3000, Sylhet",
+                  style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                      color: TextColors.textColor1),
+                ),
               )
             ],
           ),

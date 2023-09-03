@@ -12,7 +12,20 @@ class FirstRow extends StatefulWidget {
 }
 
 class _FirstRowState extends State<FirstRow> {
-  get itemNumber => Cart.inCart.length;
+  int? itemNumber;
+
+  void getItemNumber() {
+    setState(() {
+      itemNumber = Cart.inCart.length;
+    });
+  }
+
+  @override
+  void initState() {
+    getItemNumber();
+    // TODO: implement initState
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +56,7 @@ class _FirstRowState extends State<FirstRow> {
                       opacity: 0,
                       child: Text("1"),
                     )
-                  : itemNumber <= 9
+                  : itemNumber! <= 9
                       ? CircleAvatar(
                           radius: 9,
                           backgroundColor: PrimaryColors.primary3,

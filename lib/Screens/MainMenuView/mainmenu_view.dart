@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mini_project/Screens/MainMenuView/widget/FirstContainer_widgets/firstContainer_Combined.dart';
+import 'package:mini_project/Screens/MainMenuView/widget/Rest_of_the_screen_widgets/coupons.dart';
 
 class MainMenuView extends StatefulWidget {
   const MainMenuView({super.key});
@@ -10,13 +11,19 @@ class MainMenuView extends StatefulWidget {
 
 class _MainMenuViewState extends State<MainMenuView> {
   @override
+  @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            FirstContainer(),
-          ],
+        child: Container(
+          child: const SingleChildScrollView(
+            child: Column(
+              children: [
+                FirstContainer(),
+                Coupons(),
+              ],
+            ),
+          ),
         ),
       ),
     );
