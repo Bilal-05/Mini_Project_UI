@@ -1,8 +1,6 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mini_project/Constants/colors.dart';
-import 'package:mini_project/Screens/OnBoardingView/onboarding_view.dart';
 
 class Coupons extends StatelessWidget {
   const Coupons({super.key});
@@ -20,11 +18,12 @@ class Coupons extends StatelessWidget {
       child: Container(
         height: 200,
         child: ListView.builder(
+          shrinkWrap: true,
           scrollDirection: Axis.horizontal,
           itemCount: percentValue.length,
           itemBuilder: (context, index) {
             return Container(
-              margin: EdgeInsets.only(top: 20, left: 20, right: 20),
+              margin: EdgeInsets.only(top: 20, left: 20, right: 10),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(40),
                 color: couponColor[index],

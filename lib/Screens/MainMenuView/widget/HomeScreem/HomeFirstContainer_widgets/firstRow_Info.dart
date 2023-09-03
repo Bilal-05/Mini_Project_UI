@@ -43,40 +43,44 @@ class _FirstRowState extends State<FirstRow> {
           alignment: AlignmentDirectional.topEnd,
           children: [
             const SizedBox(
-              width: 28,
+              width: 30,
               child: FaIcon(
                 FontAwesomeIcons.bagShopping,
                 color: TextColors.textColor1,
-                size: 24,
+                size: 25,
               ),
             ),
-            Container(
-              child: itemNumber == 0
-                  ? const Opacity(
-                      opacity: 0,
-                      child: Text("1"),
-                    )
-                  : itemNumber! <= 9
-                      ? CircleAvatar(
-                          radius: 9,
-                          backgroundColor: PrimaryColors.primary3,
-                          child: Center(
-                            child: Text(
-                              "$itemNumber",
-                              style: const TextStyle(fontSize: 10),
+            CircleAvatar(
+              radius: 10,
+              backgroundColor: PrimaryColors.primary1,
+              child: Container(
+                child: itemNumber == 0
+                    ? const Opacity(
+                        opacity: 0,
+                        child: Text("1"),
+                      )
+                    : itemNumber! <= 9
+                        ? CircleAvatar(
+                            radius: 8,
+                            backgroundColor: PrimaryColors.primary3,
+                            child: Center(
+                              child: Text(
+                                "$itemNumber",
+                                style: const TextStyle(fontSize: 10),
+                              ),
+                            ),
+                          )
+                        : const CircleAvatar(
+                            radius: 8,
+                            backgroundColor: PrimaryColors.primary3,
+                            child: Center(
+                              child: Text(
+                                ":D",
+                                style: TextStyle(fontSize: 10),
+                              ),
                             ),
                           ),
-                        )
-                      : const CircleAvatar(
-                          radius: 8,
-                          backgroundColor: PrimaryColors.primary3,
-                          child: Center(
-                            child: Text(
-                              ":D",
-                              style: TextStyle(fontSize: 10),
-                            ),
-                          ),
-                        ),
+              ),
             ),
           ],
         ),

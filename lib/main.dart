@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mini_project/Screens/MainMenuView/mainmenu_view.dart';
 import 'package:mini_project/Screens/OnBoardingView/onboarding_view.dart';
+import 'Screens/MainMenuView/mainMenu.dart';
+import 'Screens/MainMenuView/widget/HomeScreem/HomeScreen.dart';
 
 void main() {
   runApp(const MyApp());
