@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mini_project/Constants/Colors.dart';
-import 'package:mini_project/DataBases/InCart.dart';
 import 'package:mini_project/Functions/getItemNumber.dart';
 import 'firstRow_Info.dart';
 import 'secondRow_Info.dart';
@@ -12,7 +11,7 @@ class FirstContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.4,
+      height: MediaQuery.of(context).size.height * 0.35,
       color: PrimaryColors.primary1,
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 20),

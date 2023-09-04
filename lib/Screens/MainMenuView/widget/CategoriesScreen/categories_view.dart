@@ -1,14 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:mini_project/Screens/MainMenuView/widget/CategoriesScreen/CategoryFirstContainer/firstContainer_Category.dart';
 
-class CategoriesView extends StatelessWidget {
-  const CategoriesView({super.key});
+class CategoryView extends StatefulWidget {
+  const CategoryView({super.key});
 
   @override
+  State<CategoryView> createState() => _CategoryViewState();
+}
+
+class _CategoryViewState extends State<CategoryView> {
+  @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        "Categories",
-        style: TextStyle(fontSize: 30),
+    return Scaffold(
+      body: SafeArea(
+        child: Container(
+          child: const SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [FirstCategoryContainer()],
+            ),
+          ),
+        ),
       ),
     );
   }

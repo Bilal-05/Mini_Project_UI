@@ -3,15 +3,15 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mini_project/Constants/colors.dart';
 //import 'package:mini_project/DataBases/InCart.dart';
 
-class FirstRow extends StatefulWidget {
+class FirstCategoryRow extends StatefulWidget {
   final int itemNumber;
-  const FirstRow({super.key, required this.itemNumber});
+  const FirstCategoryRow({super.key, required this.itemNumber});
 
   @override
-  State<FirstRow> createState() => _FirstRowState();
+  State<FirstCategoryRow> createState() => _FirstCategoryRowState();
 }
 
-class _FirstRowState extends State<FirstRow> {
+class _FirstCategoryRowState extends State<FirstCategoryRow> {
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -23,6 +23,15 @@ class _FirstRowState extends State<FirstRow> {
               color: TextColors.textColor1,
               fontWeight: FontWeight.w600,
               fontSize: 22),
+        ),
+        Spacer(),
+        IconButton(
+          onPressed: () {},
+          icon: const Icon(
+            Icons.search_outlined,
+            color: TextColors.textColor1,
+            size: 30,
+          ),
         ),
         Stack(
           alignment: AlignmentDirectional.topEnd,
@@ -73,7 +82,7 @@ class _FirstRowState extends State<FirstRow> {
                             ),
                           ),
                         ),
-            )
+            ),
           ],
         ),
       ],

@@ -15,7 +15,6 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
-  List item = RecommendedItems.items;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
