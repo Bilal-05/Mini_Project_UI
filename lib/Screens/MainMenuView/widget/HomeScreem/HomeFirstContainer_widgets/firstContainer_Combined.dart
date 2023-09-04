@@ -1,18 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:mini_project/Constants/Colors.dart';
 import 'package:mini_project/DataBases/InCart.dart';
+import 'package:mini_project/Functions/getItemNumber.dart';
 import 'firstRow_Info.dart';
 import 'secondRow_Info.dart';
 import 'thirdRow_Info.dart';
 
-class FirstContainer extends StatefulWidget {
+class FirstContainer extends StatelessWidget {
   const FirstContainer({super.key});
 
-  @override
-  State<FirstContainer> createState() => _FirstContainerState();
-}
-
-class _FirstContainerState extends State<FirstContainer> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -25,13 +21,19 @@ class _FirstContainerState extends State<FirstContainer> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Container(
-                margin: const EdgeInsets.only(top: 52),
-                child: FirstRow(itemNumber: Cart.inCart.length)),
+              margin: const EdgeInsets.only(top: 52),
+              child: FirstRow(
+                itemNumber: GetItemNumber.getItemNumber(),
+              ),
+            ),
             Container(
-                margin: const EdgeInsets.only(top: 20),
-                child: const SecondRow()),
+              margin: const EdgeInsets.only(top: 20),
+              child: const SecondRow(),
+            ),
             Container(
-                margin: const EdgeInsets.only(top: 20), child: const ThirdRow())
+              margin: const EdgeInsets.only(top: 20),
+              child: const ThirdRow(),
+            )
           ],
         ),
       ),

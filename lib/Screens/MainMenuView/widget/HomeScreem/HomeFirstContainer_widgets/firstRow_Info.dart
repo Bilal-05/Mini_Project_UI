@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mini_project/Constants/colors.dart';
-import 'package:mini_project/DataBases/InCart.dart';
+//import 'package:mini_project/DataBases/InCart.dart';
 
 class FirstRow extends StatefulWidget {
   final int itemNumber;
@@ -12,21 +12,6 @@ class FirstRow extends StatefulWidget {
 }
 
 class _FirstRowState extends State<FirstRow> {
-  int? itemNumber;
-
-  void getItemNumber() {
-    setState(() {
-      itemNumber = Cart.inCart.length;
-    });
-  }
-
-  @override
-  void initState() {
-    getItemNumber();
-    // TODO: implement initState
-    super.initState();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -50,27 +35,31 @@ class _FirstRowState extends State<FirstRow> {
                 size: 25,
               ),
             ),
-            CircleAvatar(
-              radius: 10,
-              backgroundColor: PrimaryColors.primary1,
-              child: Container(
-                child: itemNumber == 0
-                    ? const Opacity(
-                        opacity: 0,
-                        child: Text("1"),
-                      )
-                    : itemNumber! <= 9
-                        ? CircleAvatar(
+            Container(
+              child: widget.itemNumber == 0
+                  ? const Opacity(
+                      opacity: 0,
+                      child: Text("1"),
+                    )
+                  : widget.itemNumber <= 9
+                      ? CircleAvatar(
+                          radius: 10,
+                          backgroundColor: PrimaryColors.primary1,
+                          child: CircleAvatar(
                             radius: 8,
                             backgroundColor: PrimaryColors.primary3,
                             child: Center(
                               child: Text(
-                                "$itemNumber",
+                                "${widget.itemNumber}",
                                 style: const TextStyle(fontSize: 10),
                               ),
                             ),
-                          )
-                        : const CircleAvatar(
+                          ),
+                        )
+                      : const CircleAvatar(
+                          radius: 10,
+                          backgroundColor: PrimaryColors.primary1,
+                          child: CircleAvatar(
                             radius: 8,
                             backgroundColor: PrimaryColors.primary3,
                             child: Center(
@@ -80,8 +69,8 @@ class _FirstRowState extends State<FirstRow> {
                               ),
                             ),
                           ),
-              ),
-            ),
+                        ),
+            )
           ],
         ),
       ],

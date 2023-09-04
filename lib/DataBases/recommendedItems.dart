@@ -2,26 +2,26 @@ class RecommendedItems {
   static List items = [
     {
       'itemName': 'Salmon Filet',
-      'itemOrigin': 'Organic',
-      'itemUnit': '5',
+      'itemOrigin': 'From Sea',
+      'itemUnit': '40',
       'itemImage': 'assets/images/Salmon.png',
     },
     {
       'itemName': 'Ribeye Steak',
-      'itemOrigin': 'Organic',
-      'itemUnit': '7',
+      'itemOrigin': 'Meat',
+      'itemUnit': '10',
       'itemImage': 'assets/images/ribeye-steak.png',
     },
     {
       'itemName': 'Wagyu A5 Steak',
-      'itemOrigin': 'Organic',
-      'itemUnit': '12',
+      'itemOrigin': 'Meat',
+      'itemUnit': '30',
       'itemImage': 'assets/images/A5-steak.png',
     },
     {
       'itemName': 'Green Tea',
       'itemOrigin': 'Organic',
-      'itemUnit': '06',
+      'itemUnit': '2',
       'itemImage': 'assets/images/greenTea.png',
     }
   ];

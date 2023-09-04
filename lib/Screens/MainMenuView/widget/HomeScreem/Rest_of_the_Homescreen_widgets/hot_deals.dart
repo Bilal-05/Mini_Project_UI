@@ -1,15 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mini_project/Constants/colors.dart';
+import 'package:mini_project/DataBases/InCart.dart';
 
-class HotDeals extends StatelessWidget {
+class HotDeals extends StatefulWidget {
   final List items;
-  const HotDeals({super.key, required this.items});
+  final List cart;
+  const HotDeals({
+    super.key,
+    required this.items,
+    required this.cart,
+  });
 
+  @override
+  State<HotDeals> createState() => _HotDealsState();
+}
+
+class _HotDealsState extends State<HotDeals> {
+  Map shoppingInCart = {};
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(left: 20),
+      margin: const EdgeInsets.only(left: 20, right: 10),
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -27,7 +39,7 @@ class HotDeals extends StatelessWidget {
               child: ListView.builder(
                   shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
-                  itemCount: items.length,
+                  itemCount: widget.items.length,
                   itemBuilder: (context, index) {
                     return Container(
                       margin: EdgeInsets.all(5),
@@ -37,7 +49,7 @@ class HotDeals extends StatelessWidget {
                         borderRadius: BorderRadius.circular(12),
                         color: TextColors.textColor1,
                         border: Border.all(
-                          width: 0.1,
+                          width: 0.5,
                           color: TextColors.textColor2,
                         ),
                       ),
@@ -47,9 +59,9 @@ class HotDeals extends StatelessWidget {
                           Center(
                             child: Container(
                               height: 100,
-                              width: 130,
+                              width: 150,
                               child: Image.asset(
-                                "${items[index]['itemImage']}",
+                                "${widget.items[index]['itemImage']}",
                                 height: 100,
                                 width: 120,
                               ),
@@ -74,20 +86,20 @@ class HotDeals extends StatelessWidget {
                                   height: 2,
                                 ),
                                 Text(
-                                  items[index]['itemName'],
+                                  widget.items[index]['itemName'],
                                   style: const TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.w600),
                                 ),
                                 Text(
-                                  items[index]['itemOrigin'],
+                                  widget.items[index]['itemOrigin'],
                                   style: const TextStyle(
                                       fontSize: 12,
                                       fontWeight: FontWeight.w500),
                                 ),
                                 Container(
                                   margin: const EdgeInsets.only(top: 10),
-                                  height: 50,
+                                  height: 46,
                                   width: 150,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(50),
@@ -115,37 +127,44 @@ class HotDeals extends StatelessWidget {
                                     children: [
                                       Container(
                                         margin: EdgeInsets.only(left: 20),
-                                        child: RichText(
-                                          text: TextSpan(
-                                            children: [
-                                              const TextSpan(
-                                                text: 'Unit',
-                                                style: TextStyle(
-                                                  fontSize: 14,
-                                                  fontWeight: FontWeight.w400,
-                                                  color: TextColors.textColor3,
+                                        child: Center(
+                                          child: RichText(
+                                            text: TextSpan(
+                                              children: [
+                                                const TextSpan(
+                                                  text: 'Unit',
+                                                  style: TextStyle(
+                                                    fontSize: 14,
+                                                    fontWeight: FontWeight.w400,
+                                                    color:
+                                                        TextColors.textColor3,
+                                                  ),
                                                 ),
-                                              ),
-                                              TextSpan(
-                                                text:
-                                                    '   \$${items[index]["itemUnit"]}',
-                                                style: const TextStyle(
-                                                    fontSize: 18,
-                                                    fontWeight: FontWeight.w600,
-                                                    color: Colors.black),
-                                              ),
-                                            ],
+                                                TextSpan(
+                                                  text:
+                                                      '  \$${widget.items[index]["itemUnit"]}',
+                                                  style: const TextStyle(
+                                                      fontSize: 18,
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                      color: Colors.black),
+                                                ),
+                                              ],
+                                            ),
                                           ),
                                         ),
                                       ),
                                       FloatingActionButton.small(
                                         heroTag: "hotbtn$index",
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          widget.cart.add(index);
+                                          print(widget.cart);
+                                        },
                                         child: const FaIcon(
                                           FontAwesomeIcons.plus,
                                           size: 14,
                                         ),
-                                      )
+                                      ),
                                     ],
                                   ),
                                 ),

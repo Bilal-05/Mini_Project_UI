@@ -1,4 +1,4 @@
-import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
+//import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:mini_project/Constants/Colors.dart';
 import 'package:mini_project/Screens/MainMenuView/widget/CategoriesScreen/categories_view.dart';
@@ -14,7 +14,12 @@ class MainMenuView extends StatefulWidget {
 class _MainMenuViewState extends State<MainMenuView> {
   int index = 0;
 
-  final screen = const [HomeView(), CategoriesView()];
+  final screen = const [
+    HomeView(),
+    CategoriesView(),
+    HomeView(),
+    CategoriesView(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +27,7 @@ class _MainMenuViewState extends State<MainMenuView> {
       body: screen[index],
       bottomNavigationBar: NavigationBarTheme(
         data: NavigationBarThemeData(
+          backgroundColor: TextColors.textColor2,
           indicatorColor: TextColors.textColor2,
           labelTextStyle: MaterialStateProperty.all(
             const TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
@@ -33,6 +39,7 @@ class _MainMenuViewState extends State<MainMenuView> {
             this.index = index;
           }),
           destinations: const [
+            //home
             NavigationDestination(
               icon: Icon(Icons.home_outlined),
               selectedIcon: Icon(
@@ -41,13 +48,32 @@ class _MainMenuViewState extends State<MainMenuView> {
               ),
               label: "Home",
             ),
+            //category
             NavigationDestination(
               icon: Icon(Icons.category_outlined),
               selectedIcon: Icon(
                 Icons.category,
                 color: PrimaryColors.primary4,
               ),
-              label: "Home",
+              label: "Category",
+            ),
+            //favorites
+            NavigationDestination(
+              icon: Icon(Icons.favorite_outline),
+              selectedIcon: Icon(
+                Icons.favorite,
+                color: PrimaryColors.primary4,
+              ),
+              label: "Favorites",
+            ),
+            //setting
+            NavigationDestination(
+              icon: Icon(Icons.more_vert_outlined),
+              selectedIcon: Icon(
+                Icons.more_vert,
+                color: PrimaryColors.primary4,
+              ),
+              label: "More",
             ),
           ],
         ),

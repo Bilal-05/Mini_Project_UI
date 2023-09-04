@@ -4,12 +4,17 @@ import 'package:mini_project/Constants/colors.dart';
 
 class Recommended extends StatelessWidget {
   final List items;
-  const Recommended({super.key, required this.items});
+  final List cart;
+  const Recommended({
+    super.key,
+    required this.items,
+    required this.cart,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(left: 20),
+      margin: const EdgeInsets.only(left: 20, right: 10),
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -23,7 +28,7 @@ class Recommended extends StatelessWidget {
             ),
             Container(
               margin: EdgeInsets.only(top: 10),
-              height: 200,
+              height: 230,
               child: ListView.builder(
                   shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
@@ -32,12 +37,12 @@ class Recommended extends StatelessWidget {
                     return Container(
                       margin: EdgeInsets.all(5),
                       height: 200,
-                      width: 130,
+                      width: 150,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12),
                         color: TextColors.textColor1,
                         border: Border.all(
-                          width: 0.1,
+                          width: 0.5,
                           color: TextColors.textColor2,
                         ),
                       ),
@@ -56,7 +61,7 @@ class Recommended extends StatelessWidget {
                           Center(
                             child: Container(
                               height: 2,
-                              width: 110,
+                              width: 130,
                               decoration: BoxDecoration(
                                 color: SecondaryColors.secondary4,
                                 borderRadius: BorderRadius.circular(5),
@@ -85,8 +90,8 @@ class Recommended extends StatelessWidget {
                                 ),
                                 Container(
                                   margin: const EdgeInsets.only(top: 10),
-                                  height: 24,
-                                  width: 110,
+                                  height: 46,
+                                  width: 130,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(20),
                                     boxShadow: const [
@@ -112,7 +117,7 @@ class Recommended extends StatelessWidget {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Container(
-                                        margin: EdgeInsets.only(left: 8),
+                                        margin: EdgeInsets.only(left: 10),
                                         child: RichText(
                                           text: TextSpan(
                                             children: [
@@ -126,7 +131,7 @@ class Recommended extends StatelessWidget {
                                               ),
                                               TextSpan(
                                                 text:
-                                                    ' \$${items[index]["itemUnit"]}',
+                                                    '  \$${items[index]["itemUnit"]}',
                                                 style: const TextStyle(
                                                     fontSize: 14,
                                                     fontWeight: FontWeight.w600,

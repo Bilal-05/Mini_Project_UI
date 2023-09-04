@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mini_project/DataBases/InCart.dart';
 import 'package:mini_project/DataBases/hot_deals.dart';
 import 'package:mini_project/DataBases/recommendedItems.dart';
 import 'Rest_of_the_Homescreen_widgets/hot_deals.dart';
@@ -29,11 +30,17 @@ class _HomeViewState extends State<HomeView> {
                 const SizedBox(
                   height: 10,
                 ),
-                Recommended(items: RecommendedItems.items),
+                Recommended(
+                  items: RecommendedItems.items,
+                  cart: Cart.inCart,
+                ),
                 const SizedBox(
                   height: 10,
                 ),
-                HotDeals(items: HotDeal.items),
+                HotDeals(
+                  items: HotDeal.items,
+                  cart: Cart.inCart,
+                ),
               ],
             ),
           ),
