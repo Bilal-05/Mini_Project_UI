@@ -37,7 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   font_awesome_flutter: ^10.5.0
   dropdown_button2: ^2.3.9
-  carousel_slider: ^4.2.1
+  flutter_svg: ^2.0.7
   animated_notch_bottom_bar: ^1.0.0
 
 dev_dependencies:
@@ -64,17 +64,10 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - animations\done_phone.json
-    - animations\shopping_phone.json
-    - assets\images\A5-steak.png
-    - assets\images\ribeye-steak.png
-    - assets\images\Salmon.png
-    - assets\images\greenTea.png
-    - assets\category-png\Chicken.png
-    - assets\category-png\Cow.png
-    - assets\category-png\Fish.png
-    - assets\category-png\fruits.png
-    - assets\category-png\veg.png
+    - animations/
+    - assets/images/
+    - assets/category-png/
+    - assets/navbar/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

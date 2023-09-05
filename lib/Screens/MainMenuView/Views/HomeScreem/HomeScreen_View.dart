@@ -18,30 +18,31 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Container(
-          child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const FirstContainer(),
-                const Coupons(),
-                const SizedBox(
-                  height: 10,
-                ),
-                Recommended(
-                  items: RecommendedItems.items,
-                  cart: Cart.inCart,
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                HotDeals(
+      body: Container(
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const FirstContainer(),
+              const Coupons(),
+              const SizedBox(
+                height: 10,
+              ),
+              Recommended(
+                items: RecommendedItems.items,
+                cart: Cart.inCart,
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Container(
+                margin: const EdgeInsets.only(bottom: 100),
+                child: HotDeals(
                   items: HotDeal.items,
                   cart: Cart.inCart,
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
