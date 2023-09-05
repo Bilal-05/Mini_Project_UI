@@ -7,7 +7,10 @@ class Coupons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Color> couponColor = [PrimaryColors.primary3, PrimaryColors.primary4];
+    List<Color> couponColor = [
+      PrimaryColors.primaryOrange,
+      PrimaryColors.primaryYellow
+    ];
 
     List<String> percentValue = ["50", "25"];
 

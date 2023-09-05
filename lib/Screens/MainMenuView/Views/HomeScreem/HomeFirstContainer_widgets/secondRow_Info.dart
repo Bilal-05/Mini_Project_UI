@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:mini_project/Constants/Colors.dart';
+import 'package:mini_project/Constants/colors.dart';
 
 class SecondRow extends StatefulWidget {
   const SecondRow({super.key});
@@ -37,16 +37,16 @@ class _SecondRowState extends State<SecondRow> {
           hintStyle: const TextStyle(color: TextColors.textColor1),
           prefixIconColor: TextColors.textColor1,
           prefixIcon: const Icon(Icons.search_sharp),
-          fillColor: PrimaryColors.primary2,
+          fillColor: PrimaryColors.primaryDarkBlue,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(28),
             borderSide:
-                const BorderSide(color: PrimaryColors.primary1, width: 3),
+                const BorderSide(color: PrimaryColors.primaryBlue, width: 3),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(28),
             borderSide:
-                const BorderSide(color: PrimaryColors.primary1, width: 3),
+                const BorderSide(color: PrimaryColors.primaryBlue, width: 3),
           ),
         ),
         controller: HomeController,

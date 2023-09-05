@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mini_project/Constants/colors.dart';
-import 'package:mini_project/Screens/CategoriesScreen-2/categories_view2.dart';
-import 'package:mini_project/Screens/MainMenuView/Views/FavoriteScreen/favorite_view.dart';
+import 'package:mini_project/Screens/ProductView/Product_View.dart';
 
 class Products extends StatelessWidget {
   final List Categories;
@@ -33,6 +32,7 @@ class Products extends StatelessWidget {
                           opacity: animation,
                           child: CategoryView2(
                             pageNo: index,
+                            categoryName: Categories[index]['categoryName'],
                           ),
                         );
                       }));
@@ -63,7 +63,7 @@ class Products extends StatelessWidget {
                     height: 2,
                     width: 120,
                     decoration: BoxDecoration(
-                      color: SecondaryColors.secondary4,
+                      color: SecondaryColors.secondaryGrey01,
                       borderRadius: BorderRadius.circular(5),
                     ),
                   ),

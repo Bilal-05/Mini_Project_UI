@@ -24,7 +24,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
       itemCount: screenNo.length,
       itemBuilder: (BuildContext context, int index) {
         return Scaffold(
-          backgroundColor: PrimaryColors.primary1,
+          backgroundColor: PrimaryColors.primaryBlue,
           body: SafeArea(
             child: Center(
               child: Column(
@@ -129,7 +129,7 @@ Widget row1() {
         opacity: 0.23,
         child: Container(
           decoration: BoxDecoration(
-            color: SecondaryColors.secondary7,
+            color: SecondaryColors.secondaryWhite20,
             borderRadius: BorderRadius.circular(4),
           ),
           width: 24,
@@ -141,7 +141,7 @@ Widget row1() {
       ),
       Container(
         decoration: BoxDecoration(
-          color: SecondaryColors.secondary7,
+          color: SecondaryColors.secondaryWhite20,
           borderRadius: BorderRadius.circular(4),
         ),
         width: 34,
@@ -157,7 +157,7 @@ Widget row2() {
     children: [
       Container(
         decoration: BoxDecoration(
-          color: SecondaryColors.secondary7,
+          color: SecondaryColors.secondaryWhite20,
           borderRadius: BorderRadius.circular(4),
         ),
         width: 34,
@@ -170,7 +170,7 @@ Widget row2() {
         opacity: 0.23,
         child: Container(
           decoration: BoxDecoration(
-            color: SecondaryColors.secondary7,
+            color: SecondaryColors.secondaryWhite20,
             borderRadius: BorderRadius.circular(4),
           ),
           width: 24,

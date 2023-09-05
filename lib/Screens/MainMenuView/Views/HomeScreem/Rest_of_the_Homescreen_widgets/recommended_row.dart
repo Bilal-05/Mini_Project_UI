@@ -64,7 +64,7 @@ class Recommended extends StatelessWidget {
                             height: 2,
                             width: 130,
                             decoration: BoxDecoration(
-                              color: SecondaryColors.secondary4,
+                              color: SecondaryColors.secondaryGrey01,
                               borderRadius: BorderRadius.circular(5),
                             ),
                           ),

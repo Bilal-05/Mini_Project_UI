@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mini_project/Constants/Colors.dart';
+import 'package:mini_project/Constants/colors.dart';
 import 'package:mini_project/Functions/getItemNumber.dart';
 
 import 'firstRow_Category.dart';
@@ -11,7 +11,7 @@ class FirstCategoryContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: MediaQuery.of(context).size.height * 0.35,
-      color: PrimaryColors.primary1,
+      color: PrimaryColors.primaryBlue,
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(

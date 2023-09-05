@@ -3,20 +3,20 @@
 import 'package:flutter/material.dart';
 
 class PrimaryColors {
-  static const Color primary1 = Color(0xff2A4BA0);
-  static const Color primary2 = Color(0xff153075);
-  static const Color primary3 = Color(0xffF9B023);
-  static const Color primary4 = Color(0xffFFC83A);
+  static const Color primaryBlue = Color(0xff2A4BA0);
+  static const Color primaryDarkBlue = Color(0xff153075);
+  static const Color primaryOrange = Color(0xffF9B023);
+  static const Color primaryYellow = Color(0xffFFC83A);
 }
 
 class SecondaryColors {
-  static const Color secondary1 = Color(0xff1B262E);
-  static const Color secondary2 = Color(0xff354349);
-  static const Color secondary3 = Color(0xff606D76);
-  static const Color secondary4 = Color(0xffA9B4BC);
-  static const Color secondary5 = Color(0xffC5CDD2);
-  static const Color secondary6 = Color(0xffE7ECF0);
-  static const Color secondary7 = Color(0xffF8F9FB);
+  static const Color secondaryBlack00 = Color(0xff1B262E);
+  static const Color secondaryBlack01 = Color(0xff354349);
+  static const Color secondaryGrey00 = Color(0xff606D76);
+  static const Color secondaryGrey01 = Color(0xffA9B4BC);
+  static const Color secondaryGrey02 = Color(0xffC5CDD2);
+  static const Color secondaryWhite10 = Color(0xffE7ECF0);
+  static const Color secondaryWhite20 = Color(0xffF8F9FB);
 }
 
 class TextColors {

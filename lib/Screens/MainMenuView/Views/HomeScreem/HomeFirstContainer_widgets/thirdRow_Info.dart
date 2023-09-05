@@ -1,6 +1,6 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
-import 'package:mini_project/Constants/Colors.dart';
+import 'package:mini_project/Constants/colors.dart';
 
 class ThirdRow extends StatefulWidget {
   const ThirdRow({super.key});
@@ -102,7 +102,8 @@ class _ThirdRowState extends State<ThirdRow> {
                     width: 85,
                   ),
                   dropdownStyleData: const DropdownStyleData(
-                      decoration: BoxDecoration(color: PrimaryColors.primary1)),
+                    decoration: BoxDecoration(color: PrimaryColors.primaryBlue),
+                  ),
                   menuItemStyleData: const MenuItemStyleData(
                     height: 38,
                   ),

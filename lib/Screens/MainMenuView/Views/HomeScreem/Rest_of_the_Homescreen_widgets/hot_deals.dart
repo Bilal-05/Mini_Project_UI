@@ -70,7 +70,7 @@ class _HotDealsState extends State<HotDeals> {
                             height: 2,
                             width: 150,
                             decoration: BoxDecoration(
-                              color: SecondaryColors.secondary4,
+                              color: SecondaryColors.secondaryGrey01,
                               borderRadius: BorderRadius.circular(5),
                             ),
                           ),
