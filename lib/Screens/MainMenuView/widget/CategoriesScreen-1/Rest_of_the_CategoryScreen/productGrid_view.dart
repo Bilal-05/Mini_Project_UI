@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mini_project/Constants/colors.dart';
-import 'package:mini_project/DataBases/recommendedItems.dart';
 
 class Products extends StatelessWidget {
   final List Categories;
@@ -23,7 +22,7 @@ class Products extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(0),
               child: Container(
-                margin: EdgeInsets.all(5),
+                margin: const EdgeInsets.all(5),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
                   color: TextColors.textColor1,
@@ -43,7 +42,7 @@ class Products extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(top: 5),
+                      margin: const EdgeInsets.only(top: 5),
                       height: 2,
                       width: 120,
                       decoration: BoxDecoration(
@@ -52,7 +51,7 @@ class Products extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(top: 10),
+                      margin: const EdgeInsets.only(top: 10),
                       child: Text(
                         "${Categories[index]['categoryName']}",
                         style: const TextStyle(
@@ -62,7 +61,7 @@ class Products extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(top: 5),
+                      margin: const EdgeInsets.only(top: 5),
                       child: Text(
                         "${Categories[index]['categoryOrigin']}",
                         style: const TextStyle(
