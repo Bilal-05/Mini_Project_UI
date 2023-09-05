@@ -25,6 +25,7 @@ class FirstCategoryContainer extends StatelessWidget {
               ),
             ),
             Container(
+              margin: EdgeInsets.only(top: 10),
               child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

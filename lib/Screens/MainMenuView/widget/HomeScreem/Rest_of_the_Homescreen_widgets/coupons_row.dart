@@ -16,7 +16,7 @@ class Coupons extends StatelessWidget {
     return InkWell(
       onTap: () {},
       child: Container(
-        height: 200,
+        height: 180,
         child: ListView.builder(
           shrinkWrap: true,
           scrollDirection: Axis.horizontal,

@@ -70,6 +70,11 @@ flutter:
     - assets\images\ribeye-steak.png
     - assets\images\Salmon.png
     - assets\images\greenTea.png
+    - assets\category-png\Chicken.png
+    - assets\category-png\Cow.png
+    - assets\category-png\Fish.png
+    - assets\category-png\fruits.png
+    - assets\category-png\veg.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

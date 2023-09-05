@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mini_project/DataBases/Categories.dart';
 import 'package:mini_project/Screens/MainMenuView/widget/CategoriesScreen/CategoryFirstContainer/firstContainer_Category.dart';
+import 'package:mini_project/Screens/MainMenuView/widget/CategoriesScreen/Rest_of_the_CategoryScreen/productGrid_view.dart';
 
 class CategoryView extends StatefulWidget {
   const CategoryView({super.key});
@@ -14,11 +16,14 @@ class _CategoryViewState extends State<CategoryView> {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          child: const SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [FirstCategoryContainer()],
-            ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const FirstCategoryContainer(),
+              Products(
+                Categories: Categories.category,
+              ),
+            ],
           ),
         ),
       ),
