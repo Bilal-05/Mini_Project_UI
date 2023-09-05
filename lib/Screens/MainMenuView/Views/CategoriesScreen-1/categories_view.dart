@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mini_project/DataBases/Categories.dart';
-import 'package:mini_project/Screens/MainMenuView/widget/CategoriesScreen/CategoryFirstContainer/firstContainer_Category.dart';
-import 'package:mini_project/Screens/MainMenuView/widget/CategoriesScreen/Rest_of_the_CategoryScreen/productGrid_view.dart';
+import 'package:mini_project/Screens/MainMenuView/Views/CategoriesScreen-1/CategoryFirstContainer/firstContainer_Category.dart';
+import 'package:mini_project/Screens/MainMenuView/Views/CategoriesScreen-1/Rest_of_the_CategoryScreen/productGrid_view.dart';
 
 class CategoryView extends StatefulWidget {
   const CategoryView({super.key});

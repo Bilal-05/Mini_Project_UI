@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:mini_project/Constants/Colors.dart';
-import 'package:mini_project/Screens/MainMenuView/widget/CategoriesScreen/categories_view.dart';
-import 'package:mini_project/Screens/MainMenuView/widget/HomeScreem/HomeScreen_View.dart';
+import 'package:mini_project/Screens/MainMenuView/Views/CategoriesScreen-1/categories_view.dart';
+import 'package:mini_project/Screens/MainMenuView/Views/HomeScreem/HomeScreen_View.dart';
 
 class MainMenuView extends StatefulWidget {
   const MainMenuView({super.key});

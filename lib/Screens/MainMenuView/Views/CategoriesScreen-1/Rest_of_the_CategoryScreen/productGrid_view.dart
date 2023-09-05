@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mini_project/Constants/colors.dart';
+import 'package:mini_project/Screens/MainMenuView/Views/CategoriesScreen-2/categories_view2.dart';
 
 class Products extends StatelessWidget {
   final List Categories;
@@ -19,6 +20,16 @@ class Products extends StatelessWidget {
             childAspectRatio: 0.75),
         itemBuilder: ((context, index) {
           return InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return CategoryView2(pageNo: index);
+                  },
+                ),
+              );
+            },
             child: Padding(
               padding: const EdgeInsets.all(0),
               child: Container(
