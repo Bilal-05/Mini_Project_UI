@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mini_project/Screens/MainMenuView/Views/CategoriesScreens/CategoriesScreen-1/CategoryFirstContainer/firstContainer_Category.dart';
 
 class CategoryView2 extends StatefulWidget {
   final int pageNo;

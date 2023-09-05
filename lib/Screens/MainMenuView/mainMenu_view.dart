@@ -181,7 +181,7 @@ class _MainMenuViewState extends State<MainMenuView> {
       ),
       extendBody: true,
       bottomNavigationBar: AnimatedNotchBottomBar(
-        showShadow: true,
+        showShadow: false,
         removeMargins: true,
         notchBottomBarController: _controller,
         durationInMilliSeconds: 400,
@@ -191,7 +191,7 @@ class _MainMenuViewState extends State<MainMenuView> {
             fontSize: 12.0,
             fontFamily: 'Manrope',
             fontWeight: FontWeight.w500),
-        notchColor: TextColors.textColor3,
+        notchColor: TextColors.textColor3.withOpacity(0.5),
         onTap: (index) {
           setState(() {
             _pageController.jumpToPage(index);
