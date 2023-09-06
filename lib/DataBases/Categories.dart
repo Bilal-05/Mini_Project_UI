@@ -1,29 +1,31 @@
+import 'package:mini_project/Constants/imagePath.dart';
+
 class Categories {
   static List category = [
     {
       'categoryName': 'Beef',
       'categoryOrigin': 'Organic',
-      'categoryImage': 'assets/category-png/Cow.png'
+      'categoryImage': ProductImages.Beef
     },
     {
       'categoryName': 'Fish',
       'categoryOrigin': 'From Sea',
-      'categoryImage': 'assets/category-png/Fish.png'
+      'categoryImage': ProductImages.Fish
     },
     {
       'categoryName': 'Chicken',
       'categoryOrigin': 'Organic',
-      'categoryImage': 'assets/category-png/Chicken.png'
+      'categoryImage': ProductImages.Chicken
     },
     {
       'categoryName': 'Fruits',
       'categoryOrigin': 'Fresh & Organic',
-      'categoryImage': 'assets/category-png/fruits.png'
+      'categoryImage': ProductImages.Fruits
     },
     {
       'categoryName': 'Vegetables',
       'categoryOrigin': 'Fresh & Organic',
-      'categoryImage': 'assets/category-png/veg.png'
+      'categoryImage': ProductImages.Vegetables
     },
   ];
 }

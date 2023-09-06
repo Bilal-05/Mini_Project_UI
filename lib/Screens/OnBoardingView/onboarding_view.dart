@@ -51,7 +51,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                   ),
                   Container(
                     width: 294,
-                    height: 75,
+                    height: 80,
                     child: Padding(
                       padding: const EdgeInsets.only(right: 22),
                       child: Text(
@@ -65,7 +65,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                     ),
                   ),
                   SizedBox(
-                    height: MediaQuery.of(context).size.width * .10,
+                    height: MediaQuery.of(context).size.width * .05,
                   ),
                   Container(
                     child: currentpage == 0
@@ -76,8 +76,8 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                   ),
                   Container(
                     margin: const EdgeInsets.symmetric(vertical: 20),
-                    height: MediaQuery.of(context).size.height * 0.3,
-                    width: MediaQuery.of(context).size.width * 0.7,
+                    height: MediaQuery.of(context).size.height * 0.35,
+                    width: MediaQuery.of(context).size.width * 0.65,
                     child: Lottie.asset(images[index]),
                   ),
                   Container(
