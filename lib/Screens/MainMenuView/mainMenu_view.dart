@@ -147,10 +147,11 @@ import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_not
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:mini_project/Constants/colors.dart';
-import 'package:mini_project/Screens/MainMenuView/Views/CategoriesScreens/CategoriesScreen-1/categories_view.dart';
 import 'package:mini_project/Screens/MainMenuView/Views/FavoriteScreen/favorite_view.dart';
 import 'package:mini_project/Screens/MainMenuView/Views/HomeScreem/HomeScreen_View.dart';
 import 'package:mini_project/Screens/MainMenuView/Views/MoreScreen/More_view.dart';
+
+import 'Views/CategoriesScreens/categories_view.dart';
 // import 'package:mini_project/Screens/OnBoardingView/onboarding_view.dart';
 
 class MainMenuView extends StatefulWidget {

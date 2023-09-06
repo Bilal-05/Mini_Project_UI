@@ -21,10 +21,10 @@ class RecommendedItems {
       'itemImage': 'assets/images/A5-steak.png',
     },
     {
-      'itemName': 'Green Tea',
+      'itemName': 'Apple',
       'itemOrigin': 'Organic',
-      'itemUnit': '2',
-      'itemImage': 'assets/images/greenTea.png',
+      'itemUnit': '0.5',
+      'itemImage': 'assets/images/appleReal.png',
     }
   ];
 }

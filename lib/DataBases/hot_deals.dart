@@ -7,7 +7,7 @@ class HotDeal {
       'itemImage': 'assets/images/Salmon.png',
     },
     {
-      'itemName': 'Waygu Ribeye Package',
+      'itemName': 'Waygu A-5 Package',
       'itemOrigin': 'Meat',
       'itemUnit': '300',
       'itemImage': 'assets/images/A5-steak.png',

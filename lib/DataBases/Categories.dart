@@ -1,7 +1,7 @@
 class Categories {
   static List category = [
     {
-      'categoryName': 'Meat',
+      'categoryName': 'Beef',
       'categoryOrigin': 'Organic',
       'categoryImage': 'assets/category-png/Cow.png'
     },
