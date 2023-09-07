@@ -3,15 +3,14 @@ import 'package:mini_project/Constants/colors.dart';
 import 'package:mini_project/Functions/getItemNumber.dart';
 import 'package:mini_project/widgets/cartButton.dart';
 
-class DetailsAppBar extends StatefulWidget {
-  final String itemName;
-  const DetailsAppBar({super.key, required this.itemName});
+class CartAppBar extends StatefulWidget {
+  const CartAppBar({super.key});
 
   @override
-  State<DetailsAppBar> createState() => _DetailsAppBarState();
+  State<CartAppBar> createState() => _CartAppBarState();
 }
 
-class _DetailsAppBarState extends State<DetailsAppBar> {
+class _CartAppBarState extends State<CartAppBar> {
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -35,7 +34,7 @@ class _DetailsAppBarState extends State<DetailsAppBar> {
         ),
         const SizedBox(width: 20),
         Text(
-          widget.itemName,
+          'Shopping Cart (${GetItemNumber.getItemNumber()})',
           style: const TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w400,

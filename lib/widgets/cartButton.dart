@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:mini_project/Screens/CartView/cart_view.dart';
 
 import '../Constants/colors.dart';
 
@@ -27,7 +28,16 @@ class _CartIconState extends State<CartIcon> {
           SizedBox(
             width: 40,
             child: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: ((context) {
+                      return CartView();
+                    }),
+                  ),
+                );
+              },
               icon: FaIcon(
                 FontAwesomeIcons.bagShopping,
                 color: widget.iconColor,

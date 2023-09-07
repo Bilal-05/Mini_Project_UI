@@ -35,4 +35,5 @@ class ProductImages {
   static String Potato = 'assets/Veg/Potato.png';
   static String Tomato = 'assets/Veg/Tomato.png';
   static String VegBundle = 'assets/Veg/Bundle.png';
+  static String Sale = "assets/navbar/Sale.png";
 }

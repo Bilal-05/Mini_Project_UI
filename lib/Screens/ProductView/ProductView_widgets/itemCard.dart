@@ -46,17 +46,7 @@ class ProductCard extends StatelessWidget {
                   ),
                   FloatingActionButton.small(
                     heroTag: "${{TagList['itemName']}}$Index",
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) {
-                            return ProductDetailView(
-                                itemName: TagList['itemName']);
-                          },
-                        ),
-                      );
-                    },
+                    onPressed: () {},
                     child: Icon(Icons.add),
                   ),
                 ],

@@ -4,9 +4,14 @@ import 'package:mini_project/Functions/getItemNumber.dart';
 
 import 'firstRow_Category.dart';
 
-class FirstCategoryContainer extends StatelessWidget {
+class FirstCategoryContainer extends StatefulWidget {
   const FirstCategoryContainer({super.key});
 
+  @override
+  State<FirstCategoryContainer> createState() => _FirstCategoryContainerState();
+}
+
+class _FirstCategoryContainerState extends State<FirstCategoryContainer> {
   @override
   Widget build(BuildContext context) {
     return Container(

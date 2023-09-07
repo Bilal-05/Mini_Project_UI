@@ -51,11 +51,15 @@ class _RecommendedState extends State<Recommended> {
                 itemBuilder: (context, index) {
                   return InkWell(
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) {
-                        return ProductDetailView(
-                            itemName: RecommendedDeal[index]['itemName']);
-                      }));
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return ProductDetailView(
+                                itemName: RecommendedDeal[index]['itemName']);
+                          },
+                        ),
+                      );
                     },
                     child: Container(
                       margin: EdgeInsets.all(5),
