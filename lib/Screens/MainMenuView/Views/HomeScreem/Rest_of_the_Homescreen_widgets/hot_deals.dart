@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mini_project/Constants/colors.dart';
 import 'package:mini_project/Functions/getList.dart';
-import 'package:mini_project/Functions/getfilteredList.dart';
 
 class HotDeals extends StatefulWidget {
   final List cart;

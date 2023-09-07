@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mini_project/Screens/OnBoardingView/onboarding_view.dart';
-import 'package:mini_project/Screens/ProductDetailView/ProductDetail_view.dart';
 
 import 'Screens/MainMenuView/mainMenu_view.dart';
 // import 'Screens/MainMenuView/widget/HomeScreem/HomeScreen.dart';

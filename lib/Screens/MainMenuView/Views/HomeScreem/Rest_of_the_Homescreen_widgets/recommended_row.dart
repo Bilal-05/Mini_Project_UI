@@ -4,11 +4,9 @@ import 'package:mini_project/Constants/colors.dart';
 import 'package:mini_project/Functions/getList.dart';
 
 class Recommended extends StatefulWidget {
-  final List items;
   final List cart;
   const Recommended({
     super.key,
-    required this.items,
     required this.cart,
   });
 

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:mini_project/Constants/colors.dart';
 import 'package:mini_project/Functions/getItemNumber.dart';
 import 'package:mini_project/widgets/cartButton.dart';
-import 'package:mini_project/widgets/searchButton.dart';
 
 class DetailsAppBar extends StatelessWidget {
   final String itemName;
