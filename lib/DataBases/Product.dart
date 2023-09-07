@@ -5,11 +5,11 @@ class Products {
     {
       'itemName': 'Fish-Package',
       'itemDescription':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'itemImage': ProductImages.FishPackage,
       'itemImgs': [ProductImages.FishPackage],
       'nurtrionalFact':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'starRating': 4.5,
       'itemReview': [
         {'reviewerName': 'J and C', 'review': 'WOW', 'starRating': 3.5},
@@ -29,15 +29,15 @@ class Products {
     {
       'itemName': 'Chicken Whole',
       'itemDescription':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'itemImage': ProductImages.ChickenWhole,
       'itemImgs': [ProductImages.ChickenWhole],
       'nurtrionalFact':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'starRating': 4.5,
       'itemReview': [
         {'reviewerName': 'Rachel Green', 'review': 'WOW', 'starRating': 3.5},
-        {'reviewerName': 'Ross Green', 'review': 'Wonderful', 'starRating': 5},
+        {'reviewerName': 'Ross Geller', 'review': 'Wonderful', 'starRating': 5},
       ],
       'itemUnit': 50,
       'Tagline': 'Organic',
@@ -47,15 +47,15 @@ class Products {
     {
       'itemName': 'Wagyu A5',
       'itemDescription':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'itemImage': ProductImages.WayguA5,
       'itemImgs': [ProductImages.WayguA5],
       'nurtrionalFact':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'starRating': 4.5,
       'itemReview': [
         {'reviewerName': 'Rachel Green', 'review': 'WOW', 'starRating': 3.5},
-        {'reviewerName': 'Ross Green', 'review': 'Wonderful', 'starRating': 5},
+        {'reviewerName': 'Ross Geller', 'review': 'Wonderful', 'starRating': 5},
       ],
       'itemUnit': 150,
       'Tagline': 'Organic',
@@ -83,11 +83,11 @@ class Products {
     {
       'itemName': 'Sliced Salmon',
       'itemDescription':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'itemImage': ProductImages.FishSlice,
       'itemImgs': [ProductImages.FishSlice],
       'nurtrionalFact':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'starRating': 4.5,
       'itemReview': [
         {'reviewerName': 'J and C', 'review': 'WOW', 'starRating': 3.5},
@@ -107,11 +107,11 @@ class Products {
     {
       'itemName': 'Thin Sliced Salmon',
       'itemDescription':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'itemImage': ProductImages.FishThinSlice,
       'itemImgs': [ProductImages.FishThinSlice],
       'nurtrionalFact':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'starRating': 4.5,
       'itemReview': [
         {'reviewerName': 'J and C', 'review': 'WOW', 'starRating': 3.5},
@@ -125,15 +125,15 @@ class Products {
     {
       'itemName': 'DrumStick Packagae',
       'itemDescription':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'itemImage': ProductImages.Chicken1kgDrumStick,
       'itemImgs': [ProductImages.Chicken1kgDrumStick],
       'nurtrionalFact':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'starRating': 4.5,
       'itemReview': [
         {'reviewerName': 'Rachel Green', 'review': 'WOW', 'starRating': 3.5},
-        {'reviewerName': 'Ross Green', 'review': 'Wonderful', 'starRating': 5},
+        {'reviewerName': 'Ross Geller', 'review': 'Wonderful', 'starRating': 5},
       ],
       'itemUnit': 100,
       'Tagline': 'Organic',
@@ -143,15 +143,15 @@ class Products {
     {
       'itemName': 'Chicken Breast',
       'itemDescription':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'itemImage': ProductImages.ChickenBreast,
       'itemImgs': [ProductImages.ChickenBreast],
       'nurtrionalFact':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'starRating': 4.5,
       'itemReview': [
         {'reviewerName': 'Rachel Green', 'review': 'WOW', 'starRating': 3.5},
-        {'reviewerName': 'Ross Green', 'review': 'Wonderful', 'starRating': 5},
+        {'reviewerName': 'Ross Geller', 'review': 'Wonderful', 'starRating': 5},
       ],
       'itemUnit': 5,
       'Tagline': 'Organic',
@@ -161,15 +161,15 @@ class Products {
     {
       'itemName': 'Chicken DrumSticks',
       'itemDescription':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'itemImage': ProductImages.ChickenDrumStick,
       'itemImgs': [ProductImages.ChickenDrumStick],
       'nurtrionalFact':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'starRating': 4.5,
       'itemReview': [
         {'reviewerName': 'Rachel Green', 'review': 'WOW', 'starRating': 3.5},
-        {'reviewerName': 'Ross Green', 'review': 'Wonderful', 'starRating': 5},
+        {'reviewerName': 'Ross Geller', 'review': 'Wonderful', 'starRating': 5},
       ],
       'itemUnit': 8,
       'Tagline': 'Organic',
@@ -179,15 +179,15 @@ class Products {
     {
       'itemName': 'Chicken Wings',
       'itemDescription':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'itemImage': ProductImages.ChickenWings,
       'itemImgs': [ProductImages.ChickenWings],
       'nurtrionalFact':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'starRating': 4.5,
       'itemReview': [
         {'reviewerName': 'Rachel Green', 'review': 'WOW', 'starRating': 3.5},
-        {'reviewerName': 'Ross Green', 'review': 'Wonderful', 'starRating': 5},
+        {'reviewerName': 'Ross Geller', 'review': 'Wonderful', 'starRating': 5},
       ],
       'itemUnit': 15,
       'Tagline': 'Organic',
@@ -197,15 +197,15 @@ class Products {
     {
       'itemName': 'Zinger Filets',
       'itemDescription':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'itemImage': ProductImages.ChickenZingerFilet,
       'itemImgs': [ProductImages.ChickenZingerFilet],
       'nurtrionalFact':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'starRating': 4.5,
       'itemReview': [
         {'reviewerName': 'Rachel Green', 'review': 'WOW', 'starRating': 3.5},
-        {'reviewerName': 'Ross Green', 'review': 'Wonderful', 'starRating': 5},
+        {'reviewerName': 'Ross Geller', 'review': 'Wonderful', 'starRating': 5},
       ],
       'itemUnit': 10,
       'Tagline': 'Organic',
@@ -215,15 +215,15 @@ class Products {
     {
       'itemName': 'Beef Boti',
       'itemDescription':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'itemImage': ProductImages.BeefBoti,
       'itemImgs': [ProductImages.BeefBoti],
       'nurtrionalFact':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'starRating': 4.5,
       'itemReview': [
         {'reviewerName': 'Rachel Green', 'review': 'WOW', 'starRating': 3.5},
-        {'reviewerName': 'Ross Green', 'review': 'Wonderful', 'starRating': 5},
+        {'reviewerName': 'Ross Geller', 'review': 'Wonderful', 'starRating': 5},
       ],
       'itemUnit': 35,
       'Tagline': 'Organic',
@@ -233,15 +233,15 @@ class Products {
     {
       'itemName': 'Beef Ribs',
       'itemDescription':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'itemImage': ProductImages.BeefRib,
       'itemImgs': [ProductImages.BeefRib],
       'nurtrionalFact':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'starRating': 4.5,
       'itemReview': [
         {'reviewerName': 'Rachel Green', 'review': 'WOW', 'starRating': 3.5},
-        {'reviewerName': 'Ross Green', 'review': 'Wonderful', 'starRating': 5},
+        {'reviewerName': 'Ross Geller', 'review': 'Wonderful', 'starRating': 5},
       ],
       'itemUnit': 80,
       'Tagline': 'Organic',
@@ -251,15 +251,15 @@ class Products {
     {
       'itemName': 'Beef Slice',
       'itemDescription':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'itemImage': ProductImages.BeefSlices,
       'itemImgs': [ProductImages.BeefSlices],
       'nurtrionalFact':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'starRating': 4.5,
       'itemReview': [
         {'reviewerName': 'Rachel Green', 'review': 'WOW', 'starRating': 3.5},
-        {'reviewerName': 'Ross Green', 'review': 'Wonderful', 'starRating': 5},
+        {'reviewerName': 'Ross Geller', 'review': 'Wonderful', 'starRating': 5},
       ],
       'itemUnit': 20,
       'Tagline': 'Organic',
@@ -269,15 +269,15 @@ class Products {
     {
       'itemName': 'Beef Steak',
       'itemDescription':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'itemImage': ProductImages.BeefSteak,
       'itemImgs': [ProductImages.BeefSteak],
       'nurtrionalFact':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'starRating': 4.5,
       'itemReview': [
         {'reviewerName': 'Rachel Green', 'review': 'WOW', 'starRating': 3.5},
-        {'reviewerName': 'Ross Green', 'review': 'Wonderful', 'starRating': 5},
+        {'reviewerName': 'Ross Geller', 'review': 'Wonderful', 'starRating': 5},
       ],
       'itemUnit': 5,
       'Tagline': 'Organic',
@@ -287,15 +287,15 @@ class Products {
     {
       'itemName': 'Apple',
       'itemDescription':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'itemImage': ProductImages.Apple,
       'itemImgs': [ProductImages.Apple],
       'nurtrionalFact':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'starRating': 5,
       'itemReview': [
         {'reviewerName': 'Rachel Green', 'review': 'WOW', 'starRating': 5},
-        {'reviewerName': 'Ross Green', 'review': 'Wonderful', 'starRating': 5},
+        {'reviewerName': 'Ross Geller', 'review': 'Wonderful', 'starRating': 5},
       ],
       'itemUnit': 10,
       'Tagline': 'Fresh & Organic',
@@ -305,15 +305,15 @@ class Products {
     {
       'itemName': 'Apricot',
       'itemDescription':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'itemImage': ProductImages.Apricot,
       'itemImgs': [ProductImages.Apricot],
       'nurtrionalFact':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'starRating': 5,
       'itemReview': [
         {'reviewerName': 'Rachel Green', 'review': 'WOW', 'starRating': 5},
-        {'reviewerName': 'Ross Green', 'review': 'Wonderful', 'starRating': 5},
+        {'reviewerName': 'Ross Geller', 'review': 'Wonderful', 'starRating': 5},
       ],
       'itemUnit': 25,
       'Tagline': 'Fresh & Organic',
@@ -323,15 +323,15 @@ class Products {
     {
       'itemName': 'Banana',
       'itemDescription':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'itemImage': ProductImages.Banana,
       'itemImgs': [ProductImages.Banana],
       'nurtrionalFact':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'starRating': 5,
       'itemReview': [
         {'reviewerName': 'Rachel Green', 'review': 'WOW', 'starRating': 5},
-        {'reviewerName': 'Ross Green', 'review': 'Wonderful', 'starRating': 5},
+        {'reviewerName': 'Ross Geller', 'review': 'Wonderful', 'starRating': 5},
       ],
       'itemUnit': 15,
       'Tagline': 'Fresh & Organic',
@@ -341,15 +341,15 @@ class Products {
     {
       'itemName': 'Blue Berry',
       'itemDescription':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'itemImage': ProductImages.Blueberry,
       'itemImgs': [ProductImages.Blueberry],
       'nurtrionalFact':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'starRating': 5,
       'itemReview': [
         {'reviewerName': 'Rachel Green', 'review': 'WOW', 'starRating': 5},
-        {'reviewerName': 'Ross Green', 'review': 'Wonderful', 'starRating': 5},
+        {'reviewerName': 'Ross Geller', 'review': 'Wonderful', 'starRating': 5},
       ],
       'itemUnit': 5,
       'Tagline': 'Fresh & Organic',
@@ -359,15 +359,15 @@ class Products {
     {
       'itemName': 'Grapes',
       'itemDescription':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'itemImage': ProductImages.Grapes,
       'itemImgs': [ProductImages.Grapes],
       'nurtrionalFact':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'starRating': 5,
       'itemReview': [
         {'reviewerName': 'Rachel Green', 'review': 'WOW', 'starRating': 5},
-        {'reviewerName': 'Ross Green', 'review': 'Wonderful', 'starRating': 5},
+        {'reviewerName': 'Ross Geller', 'review': 'Wonderful', 'starRating': 5},
       ],
       'itemUnit': 12,
       'Tagline': 'Fresh & Organic',
@@ -377,15 +377,15 @@ class Products {
     {
       'itemName': 'Japanese Mango',
       'itemDescription':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'itemImage': ProductImages.Mango,
       'itemImgs': [ProductImages.Mango],
       'nurtrionalFact':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'starRating': 100,
       'itemReview': [
         {'reviewerName': 'Rachel Green', 'review': 'WOW', 'starRating': 5},
-        {'reviewerName': 'Ross Green', 'review': 'Wonderful', 'starRating': 5},
+        {'reviewerName': 'Ross Geller', 'review': 'Wonderful', 'starRating': 5},
       ],
       'itemUnit': 5,
       'Tagline': 'Fresh & Organic',
@@ -395,15 +395,15 @@ class Products {
     {
       'itemName': 'Pomegranate',
       'itemDescription':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'itemImage': ProductImages.Pomegranate,
       'itemImgs': [ProductImages.Pomegranate],
       'nurtrionalFact':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'starRating': 5,
       'itemReview': [
         {'reviewerName': 'Rachel Green', 'review': 'WOW', 'starRating': 5},
-        {'reviewerName': 'Ross Green', 'review': 'Wonderful', 'starRating': 5},
+        {'reviewerName': 'Ross Geller', 'review': 'Wonderful', 'starRating': 5},
       ],
       'itemUnit': 18,
       'Tagline': 'Fresh & Organic',
@@ -413,15 +413,15 @@ class Products {
     {
       'itemName': 'Strawberry',
       'itemDescription':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'itemImage': ProductImages.Stawberry,
       'itemImgs': [ProductImages.Stawberry],
       'nurtrionalFact':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'starRating': 5,
       'itemReview': [
         {'reviewerName': 'Rachel Green', 'review': 'WOW', 'starRating': 5},
-        {'reviewerName': 'Ross Green', 'review': 'Wonderful', 'starRating': 5},
+        {'reviewerName': 'Ross Geller', 'review': 'Wonderful', 'starRating': 5},
       ],
       'itemUnit': 10,
       'Tagline': 'Fresh & Organic',
@@ -431,15 +431,15 @@ class Products {
     {
       'itemName': 'WaterMelon',
       'itemDescription':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'itemImage': ProductImages.Watermelon,
       'itemImgs': [ProductImages.Watermelon],
       'nurtrionalFact':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'starRating': 5,
       'itemReview': [
         {'reviewerName': 'Rachel Green', 'review': 'WOW', 'starRating': 5},
-        {'reviewerName': 'Ross Green', 'review': 'Wonderful', 'starRating': 5},
+        {'reviewerName': 'Ross Geller', 'review': 'Wonderful', 'starRating': 5},
       ],
       'itemUnit': 4,
       'Tagline': 'Fresh & Organic',
@@ -449,15 +449,15 @@ class Products {
     {
       'itemName': 'Carrot',
       'itemDescription':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'itemImage': ProductImages.Carrot,
       'itemImgs': [ProductImages.Carrot],
       'nurtrionalFact':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'starRating': 5,
       'itemReview': [
         {'reviewerName': 'Rachel Green', 'review': 'WOW', 'starRating': 5},
-        {'reviewerName': 'Ross Green', 'review': 'Wonderful', 'starRating': 5},
+        {'reviewerName': 'Ross Geller', 'review': 'Wonderful', 'starRating': 5},
       ],
       'itemUnit': 2,
       'Tagline': 'Fresh & Organic',
@@ -467,15 +467,15 @@ class Products {
     {
       'itemName': 'Onion',
       'itemDescription':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'itemImage': ProductImages.Onion,
       'itemImgs': [ProductImages.Onion],
       'nurtrionalFact':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'starRating': 5,
       'itemReview': [
         {'reviewerName': 'Rachel Green', 'review': 'WOW', 'starRating': 5},
-        {'reviewerName': 'Ross Green', 'review': 'Wonderful', 'starRating': 5},
+        {'reviewerName': 'Ross Geller', 'review': 'Wonderful', 'starRating': 5},
       ],
       'itemUnit': 3,
       'Tagline': 'Fresh & Organic',
@@ -485,15 +485,15 @@ class Products {
     {
       'itemName': 'Tomato',
       'itemDescription':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'itemImage': ProductImages.Tomato,
       'itemImgs': [ProductImages.Tomato],
       'nurtrionalFact':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'starRating': 5,
       'itemReview': [
         {'reviewerName': 'Rachel Green', 'review': 'WOW', 'starRating': 5},
-        {'reviewerName': 'Ross Green', 'review': 'Wonderful', 'starRating': 5},
+        {'reviewerName': 'Ross Geller', 'review': 'Wonderful', 'starRating': 5},
       ],
       'itemUnit': 5,
       'Tagline': 'Fresh & Organic',
@@ -503,15 +503,15 @@ class Products {
     {
       'itemName': 'Potato',
       'itemDescription':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'itemImage': ProductImages.Potato,
       'itemImgs': [ProductImages.Potato],
       'nurtrionalFact':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'starRating': 5,
       'itemReview': [
         {'reviewerName': 'Rachel Green', 'review': 'WOW', 'starRating': 5},
-        {'reviewerName': 'Ross Green', 'review': 'Wonderful', 'starRating': 5},
+        {'reviewerName': 'Ross Geller', 'review': 'Wonderful', 'starRating': 5},
       ],
       'itemUnit': 5,
       'Tagline': 'Fresh & Organic',
@@ -521,15 +521,15 @@ class Products {
     {
       'itemName': 'Bundle',
       'itemDescription':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'itemImage': ProductImages.VegBundle,
       'itemImgs': [ProductImages.VegBundle],
       'nurtrionalFact':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       'starRating': 5,
       'itemReview': [
         {'reviewerName': 'Rachel Green', 'review': 'WOW', 'starRating': 5},
-        {'reviewerName': 'Ross Green', 'review': 'Wonderful', 'starRating': 5},
+        {'reviewerName': 'Ross Geller', 'review': 'Wonderful', 'starRating': 5},
       ],
       'itemUnit': 100,
       'Tagline': 'Fresh & Organic',

@@ -169,7 +169,7 @@ class _RecommendedState extends State<Recommended> {
                                       ),
                                     ),
                                     FloatingActionButton.small(
-                                      heroTag: "hotbtn$index",
+                                      heroTag: "recommendedbtn$index",
                                       onPressed: () {
                                         widget.cart.add(index);
                                         print(widget.cart);

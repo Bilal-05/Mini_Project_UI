@@ -27,6 +27,7 @@ class _ProductViewState extends State<ProductView>
   void initState() {
     tag = 'Popular';
     TagList = FilteredList.getFilteredList(widget.categoryName, tag!);
+
     // TODO: implement initState
     super.initState();
   }
@@ -40,13 +41,13 @@ class _ProductViewState extends State<ProductView>
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                margin: EdgeInsets.fromLTRB(10, 10, 0, 0),
+                margin: EdgeInsets.fromLTRB(15, 10, 0, 0),
                 child: ProductAppBar(
                   categoryName: widget.categoryName,
                 ),
               ),
               Container(
-                margin: EdgeInsets.fromLTRB(10, 10, 10, 0),
+                margin: EdgeInsets.fromLTRB(15, 10, 10, 0),
                 child: SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(

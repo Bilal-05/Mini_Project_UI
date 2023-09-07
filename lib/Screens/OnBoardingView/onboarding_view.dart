@@ -82,26 +82,29 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                   ),
                   Container(
                     margin: const EdgeInsets.symmetric(horizontal: 20),
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: TextColors.textColor1,
-                        fixedSize: const Size(260, 70),
-                        shape: const RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(20),
+                    child: Hero(
+                      tag: 'onBoarding$index',
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: TextColors.textColor1,
+                          fixedSize: const Size(260, 70),
+                          shape: const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(20),
+                            ),
                           ),
                         ),
-                      ),
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/firstscreen');
-                      },
-                      child: const Text(
-                        "Get Started →",
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontFamily: "Manrope",
-                          fontWeight: FontWeight.w600,
-                          color: TextColors.textColor3,
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/firstscreen');
+                        },
+                        child: const Text(
+                          "Get Started →",
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontFamily: "Manrope",
+                            fontWeight: FontWeight.w600,
+                            color: TextColors.textColor3,
+                          ),
                         ),
                       ),
                     ),
