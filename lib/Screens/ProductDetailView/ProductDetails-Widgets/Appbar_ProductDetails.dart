@@ -4,9 +4,9 @@ import 'package:mini_project/Functions/getItemNumber.dart';
 import 'package:mini_project/widgets/cartButton.dart';
 import 'package:mini_project/widgets/searchButton.dart';
 
-class ProductAppBar extends StatelessWidget {
-  final String categoryName;
-  const ProductAppBar({super.key, required this.categoryName});
+class DetailsAppBar extends StatelessWidget {
+  final String itemName;
+  const DetailsAppBar({super.key, required this.itemName});
 
   @override
   Widget build(BuildContext context) {
@@ -31,23 +31,20 @@ class ProductAppBar extends StatelessWidget {
         ),
         const SizedBox(width: 20),
         Text(
-          categoryName,
+          itemName,
           style: const TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w400,
               color: TextColors.textColor3),
         ),
         const Spacer(),
-        const SearchIcon(
-          iconColor: SecondaryColors.secondaryBlack01,
-        ),
-        const SizedBox(
-          width: 20,
-        ),
-        CartIcon(
-          itemNumber: GetItemNumber.getItemNumber(),
-          iconColor: SecondaryColors.secondaryBlack01,
-          numberCircleColor: TextColors.textColor1,
+        Container(
+          margin: const EdgeInsets.only(left: 10),
+          child: CartIcon(
+            itemNumber: GetItemNumber.getItemNumber(),
+            iconColor: SecondaryColors.secondaryBlack01,
+            numberCircleColor: TextColors.textColor1,
+          ),
         ),
       ],
     );

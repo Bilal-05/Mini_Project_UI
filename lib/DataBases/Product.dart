@@ -3,6 +3,66 @@ import 'package:mini_project/Constants/imagePath.dart';
 class Products {
   static List items = [
     {
+      'itemName': 'Fish-Package',
+      'itemDescription':
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      'itemImage': ProductImages.FishPackage,
+      'itemImgs': [ProductImages.FishPackage],
+      'nurtrionalFact':
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      'starRating': 4.5,
+      'itemReview': [
+        {'reviewerName': 'J and C', 'review': 'WOW', 'starRating': 3.5},
+        {'reviewerName': 'Messi', 'review': 'Wonderful', 'starRating': 5},
+      ],
+      'itemUnit': 300,
+      'Tagline': 'From Sea',
+      'Category': 'Fish',
+      'Tags': [
+        'Popular',
+        'Small Fishes',
+        'Big Fishes',
+        'Free Delivery',
+        'HotDeal'
+      ]
+    },
+    {
+      'itemName': 'Chicken Whole',
+      'itemDescription':
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      'itemImage': ProductImages.ChickenWhole,
+      'itemImgs': [ProductImages.ChickenWhole],
+      'nurtrionalFact':
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      'starRating': 4.5,
+      'itemReview': [
+        {'reviewerName': 'Rachel Green', 'review': 'WOW', 'starRating': 3.5},
+        {'reviewerName': 'Ross Green', 'review': 'Wonderful', 'starRating': 5},
+      ],
+      'itemUnit': 50,
+      'Tagline': 'Organic',
+      'Category': 'Chicken',
+      'Tags': ['Popular', 'Low Price', 'Free Delivery', 'BBQ', 'HotDeal']
+    },
+    {
+      'itemName': 'Wagyu A5',
+      'itemDescription':
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      'itemImage': ProductImages.WayguA5,
+      'itemImgs': [ProductImages.WayguA5],
+      'nurtrionalFact':
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      'starRating': 4.5,
+      'itemReview': [
+        {'reviewerName': 'Rachel Green', 'review': 'WOW', 'starRating': 3.5},
+        {'reviewerName': 'Ross Green', 'review': 'Wonderful', 'starRating': 5},
+      ],
+      'itemUnit': 150,
+      'Tagline': 'Organic',
+      'Category': 'Beef',
+      'Tags': ['Popular', 'Free Delivery', 'Recommended']
+    },
+    {
       'itemName': 'Sliced Tuna',
       'itemDescription':
           'Tuna is a saltwater fish belonging to the mackerel family. Its highly popular worldwide and is a rich source of nutrients, including omega-3 fatty acids, vitamin B12, vitamin D, selenium, niacin, phosphorus, magnesium, and potassium',
@@ -18,7 +78,7 @@ class Products {
       'itemUnit': 90,
       'Tagline': 'From Sea',
       'Category': 'Fish',
-      'Tags': ['Popular', 'Big Fishes', 'Free Delivery']
+      'Tags': ['Popular', 'Big Fishes', 'Free Delivery', 'Recommended']
     },
     {
       'itemName': 'Sliced Salmon',
@@ -36,25 +96,13 @@ class Products {
       'itemUnit': 80,
       'Tagline': 'From Sea',
       'Category': 'Fish',
-      'Tags': ['Popular', 'Small Fishes', 'Free Delivery', 'Low Price ']
-    },
-    {
-      'itemName': 'Sliced Salmon',
-      'itemDescription':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-      'itemImage': ProductImages.FishSlice,
-      'itemImgs': [ProductImages.FishSlice],
-      'nurtrionalFact':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-      'starRating': 4.5,
-      'itemReview': [
-        {'reviewerName': 'J and C', 'review': 'WOW', 'starRating': 3.5},
-        {'reviewerName': 'Messi', 'review': 'Wonderful', 'starRating': 5},
-      ],
-      'itemUnit': 80,
-      'Tagline': 'From Sea',
-      'Category': 'Fish',
-      'Tags': ['Popular', 'Small Fishes', 'Free Delivery', 'Low Price ']
+      'Tags': [
+        'Popular',
+        'Small Fishes',
+        'Free Delivery',
+        'Low Price ',
+        'Recommended'
+      ]
     },
     {
       'itemName': 'Thin Sliced Salmon',
@@ -75,24 +123,6 @@ class Products {
       'Tags': ['Popular', 'Small Fishes', 'Free Delivery', 'Low Price']
     },
     {
-      'itemName': 'Fish-Package',
-      'itemDescription':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-      'itemImage': ProductImages.FishPackage,
-      'itemImgs': [ProductImages.FishPackage],
-      'nurtrionalFact':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-      'starRating': 4.5,
-      'itemReview': [
-        {'reviewerName': 'J and C', 'review': 'WOW', 'starRating': 3.5},
-        {'reviewerName': 'Messi', 'review': 'Wonderful', 'starRating': 5},
-      ],
-      'itemUnit': 300,
-      'Tagline': 'From Sea',
-      'Category': 'Fish',
-      'Tags': ['Popular', 'Small Fishes', 'Big Fishes', 'Free Delivery']
-    },
-    {
       'itemName': 'DrumStick Packagae',
       'itemDescription':
           'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
@@ -108,25 +138,7 @@ class Products {
       'itemUnit': 100,
       'Tagline': 'Organic',
       'Category': 'Chicken',
-      'Tags': ['Popular', 'Free Delivery', 'BBQ']
-    },
-    {
-      'itemName': 'Chicken Whole',
-      'itemDescription':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-      'itemImage': ProductImages.ChickenWhole,
-      'itemImgs': [ProductImages.ChickenWhole],
-      'nurtrionalFact':
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-      'starRating': 4.5,
-      'itemReview': [
-        {'reviewerName': 'Rachel Green', 'review': 'WOW', 'starRating': 3.5},
-        {'reviewerName': 'Ross Green', 'review': 'Wonderful', 'starRating': 5},
-      ],
-      'itemUnit': 50,
-      'Tagline': 'Organic',
-      'Category': 'Chicken',
-      'Tags': ['Popular', 'Low Price', 'Free Delivery', 'BBQ']
+      'Tags': ['Popular', 'Free Delivery', 'BBQ', 'HotDeal']
     },
     {
       'itemName': 'Chicken Breast',
@@ -198,7 +210,7 @@ class Products {
       'itemUnit': 10,
       'Tagline': 'Organic',
       'Category': 'Chicken',
-      'Tags': ['Popular', 'Low Price', 'Free Delivery']
+      'Tags': ['Popular', 'Low Price', 'Free Delivery', 'Recommended']
     },
     {
       'itemName': 'Beef Boti',
@@ -288,7 +300,7 @@ class Products {
       'itemUnit': 10,
       'Tagline': 'Fresh & Organic',
       'Category': 'Fruits',
-      'Tags': ['Popular', 'Low Price', 'Free Delivery', 'Fresh']
+      'Tags': ['Popular', 'Low Price', 'Free Delivery', 'Fresh', 'Recommended']
     },
     {
       'itemName': 'Apricot',
@@ -378,7 +390,7 @@ class Products {
       'itemUnit': 5,
       'Tagline': 'Fresh & Organic',
       'Category': 'Fruits',
-      'Tags': ['Popular', 'Fresh']
+      'Tags': ['Popular', 'Fresh', 'Recommended']
     },
     {
       'itemName': 'Pomegranate',
@@ -522,7 +534,7 @@ class Products {
       'itemUnit': 100,
       'Tagline': 'Fresh & Organic',
       'Category': 'Vegetables',
-      'Tags': ['Popular', 'Free Delivery', 'Fresh']
+      'Tags': ['Popular', 'Free Delivery', 'Fresh', 'HotDeal']
     },
   ];
 }

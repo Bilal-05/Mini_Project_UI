@@ -185,14 +185,14 @@ class _MainMenuViewState extends State<MainMenuView> {
         showShadow: false,
         removeMargins: true,
         notchBottomBarController: _controller,
-        durationInMilliSeconds: 400,
+        durationInMilliSeconds: 300,
         showLabel: true,
         itemLabelStyle: const TextStyle(
             color: Colors.black,
             fontSize: 12.0,
             fontFamily: 'Manrope',
             fontWeight: FontWeight.w500),
-        notchColor: TextColors.textColor3.withOpacity(0.5),
+        notchColor: TextColors.textColor3.withOpacity(0.8),
         onTap: (index) {
           setState(() {
             _pageController.jumpToPage(index);

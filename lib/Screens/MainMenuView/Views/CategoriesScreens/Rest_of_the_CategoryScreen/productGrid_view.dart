@@ -21,20 +21,21 @@ class Products extends StatelessWidget {
         return InkWell(
           onTap: () {
             Navigator.push(
-                context,
-                PageRouteBuilder(
-                    transitionDuration: const Duration(milliseconds: 500),
-                    reverseTransitionDuration:
-                        const Duration(milliseconds: 500),
-                    pageBuilder: (context, animation, secondaryAnimation) {
-                      return FadeTransition(
-                        opacity: animation,
-                        child: ProductView(
-                          pageNo: index,
-                          categoryName: Categories[index]['categoryName'],
-                        ),
-                      );
-                    }));
+              context,
+              PageRouteBuilder(
+                transitionDuration: const Duration(milliseconds: 500),
+                reverseTransitionDuration: const Duration(milliseconds: 500),
+                pageBuilder: (context, animation, secondaryAnimation) {
+                  return FadeTransition(
+                    opacity: animation,
+                    child: ProductView(
+                      pageNo: index,
+                      categoryName: Categories[index]['categoryName'],
+                    ),
+                  );
+                },
+              ),
+            );
           },
           child: Container(
             margin: const EdgeInsets.all(5),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mini_project/Screens/MainMenuView/Views/FavoriteScreen/favorite_view.dart';
+import 'package:mini_project/Screens/ProductDetailView/ProductDetail_view.dart';
 
 import '../../../Constants/colors.dart';
 
@@ -14,11 +14,9 @@ class ProductCard extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          PageRouteBuilder(
-            transitionDuration: const Duration(milliseconds: 500),
-            reverseTransitionDuration: const Duration(milliseconds: 500),
-            pageBuilder: (context, animation, secondaryAnimation) {
-              return FadeTransition(opacity: animation, child: FavoriteView());
+          MaterialPageRoute(
+            builder: (context) {
+              return ProductDetailView(itemName: TagList['itemName']);
             },
           ),
         );
@@ -48,7 +46,17 @@ class ProductCard extends StatelessWidget {
                   ),
                   FloatingActionButton.small(
                     heroTag: "${{TagList['itemName']}}$Index",
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return ProductDetailView(
+                                itemName: TagList['itemName']);
+                          },
+                        ),
+                      );
+                    },
                     child: Icon(Icons.add),
                   ),
                 ],

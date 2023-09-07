@@ -38,7 +38,6 @@ class _HomeViewState extends State<HomeView> {
               Container(
                 margin: const EdgeInsets.only(bottom: 100),
                 child: HotDeals(
-                  items: HotDeal.items,
                   cart: Cart.inCart,
                 ),
               ),

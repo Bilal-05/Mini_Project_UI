@@ -27,7 +27,6 @@ class _ProductViewState extends State<ProductView>
   void initState() {
     tag = 'Popular';
     TagList = FilteredList.getFilteredList(widget.categoryName, tag!);
-    print(TagList);
     // TODO: implement initState
     super.initState();
   }
@@ -87,7 +86,6 @@ class _ProductViewState extends State<ProductView>
                             tag = 'Popular';
                             TagList = FilteredList.getFilteredList(
                                 widget.categoryName, tag!);
-                            print(TagList);
                           });
                         },
                       ),
@@ -126,7 +124,6 @@ class _ProductViewState extends State<ProductView>
                             tag = 'Low Price';
                             TagList = FilteredList.getFilteredList(
                                 widget.categoryName, tag!);
-                            print(TagList);
                           });
                         },
                       ),
@@ -168,7 +165,6 @@ class _ProductViewState extends State<ProductView>
                                   tag = 'Big Fishes';
                                   TagList = FilteredList.getFilteredList(
                                       widget.categoryName, tag!);
-                                  print(TagList);
                                 });
                               },
                             )
@@ -211,7 +207,6 @@ class _ProductViewState extends State<ProductView>
                                   tag = 'Small Fishes';
                                   TagList = FilteredList.getFilteredList(
                                       widget.categoryName, tag!);
-                                  print(TagList);
                                 });
                               },
                             )
@@ -255,7 +250,6 @@ class _ProductViewState extends State<ProductView>
                                   tag = 'BBQ';
                                   TagList = FilteredList.getFilteredList(
                                       widget.categoryName, tag!);
-                                  print(TagList);
                                 });
                               },
                             )
@@ -300,7 +294,6 @@ class _ProductViewState extends State<ProductView>
                                   tag = 'Fresh';
                                   TagList = FilteredList.getFilteredList(
                                       widget.categoryName, tag!);
-                                  print(TagList);
                                 });
                               },
                             )
@@ -339,7 +332,6 @@ class _ProductViewState extends State<ProductView>
                             tag = 'Free Delivery';
                             TagList = FilteredList.getFilteredList(
                                 widget.categoryName, tag!);
-                            print(TagList);
                           });
                         },
                       ),

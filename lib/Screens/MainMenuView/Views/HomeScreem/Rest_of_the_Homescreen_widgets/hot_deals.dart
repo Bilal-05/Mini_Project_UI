@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mini_project/Constants/colors.dart';
+import 'package:mini_project/Functions/getList.dart';
+import 'package:mini_project/Functions/getfilteredList.dart';
 
 class HotDeals extends StatefulWidget {
-  final List items;
   final List cart;
   const HotDeals({
     super.key,
-    required this.items,
     required this.cart,
   });
 
@@ -16,7 +16,15 @@ class HotDeals extends StatefulWidget {
 }
 
 class _HotDealsState extends State<HotDeals> {
-  Map shoppingInCart = {};
+  List HotDeal = [];
+  @override
+  void initState() {
+    HotDeal = FetchList.getList('HotDeal');
+    // print(HotDeal);
+    // TODO: implement initState
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -33,17 +41,17 @@ class _HotDealsState extends State<HotDeals> {
           ),
           Container(
             margin: EdgeInsets.only(top: 10),
-            height: 230,
+            height: 240,
             color: Colors.white,
             child: ListView.builder(
                 physics: BouncingScrollPhysics(),
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
-                itemCount: widget.items.length,
+                itemCount: HotDeal.length,
                 itemBuilder: (context, index) {
                   return Container(
                     margin: EdgeInsets.all(5),
-                    height: 200,
+                    height: 210,
                     width: 200,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
@@ -60,10 +68,13 @@ class _HotDealsState extends State<HotDeals> {
                           child: Container(
                             height: 100,
                             width: 150,
-                            child: Image.asset(
-                              "${widget.items[index]['itemImage']}",
-                              height: 100,
-                              width: 120,
+                            child: Padding(
+                              padding: const EdgeInsets.all(15),
+                              child: Image.asset(
+                                "${HotDeal[index]['itemImage']}",
+                                height: 100,
+                                width: 120,
+                              ),
                             ),
                           ),
                         ),
@@ -85,15 +96,23 @@ class _HotDealsState extends State<HotDeals> {
                               const SizedBox(
                                 height: 2,
                               ),
-                              Text(
-                                widget.items[index]['itemName'],
-                                style: const TextStyle(
-                                    fontSize: 14, fontWeight: FontWeight.w600),
+                              Container(
+                                margin: EdgeInsets.only(top: 5),
+                                child: Text(
+                                  HotDeal[index]['itemName'],
+                                  style: const TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w600),
+                                ),
                               ),
-                              Text(
-                                widget.items[index]['itemOrigin'],
-                                style: const TextStyle(
-                                    fontSize: 12, fontWeight: FontWeight.w500),
+                              Container(
+                                margin: EdgeInsets.only(top: 2, bottom: 5),
+                                child: Text(
+                                  HotDeal[index]['Tagline'],
+                                  style: const TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w500),
+                                ),
                               ),
                               Container(
                                 margin: const EdgeInsets.only(top: 10),
@@ -139,7 +158,7 @@ class _HotDealsState extends State<HotDeals> {
                                               ),
                                               TextSpan(
                                                 text:
-                                                    '  \$${widget.items[index]["itemUnit"]}',
+                                                    '  \$${HotDeal[index]["itemUnit"]}',
                                                 style: const TextStyle(
                                                     fontSize: 18,
                                                     fontWeight: FontWeight.w600,
