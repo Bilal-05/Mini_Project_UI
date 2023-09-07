@@ -20,8 +20,10 @@ class Coupons extends StatelessWidget {
       onTap: () {},
       child: Container(
         height: 180,
+        color: Colors.white,
         child: ListView.builder(
           shrinkWrap: true,
+          physics: BouncingScrollPhysics(),
           scrollDirection: Axis.horizontal,
           itemCount: percentValue.length,
           itemBuilder: (context, index) {

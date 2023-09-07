@@ -10,11 +10,12 @@ class FirstCategoryContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.35,
+      height: MediaQuery.of(context).size.height * 0.40,
       color: PrimaryColors.primaryBlue,
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -25,7 +26,7 @@ class FirstCategoryContainer extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: 10),
+              margin: EdgeInsets.only(top: 20),
               child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

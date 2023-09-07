@@ -34,7 +34,9 @@ class _HotDealsState extends State<HotDeals> {
           Container(
             margin: EdgeInsets.only(top: 10),
             height: 230,
+            color: Colors.white,
             child: ListView.builder(
+                physics: BouncingScrollPhysics(),
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
                 itemCount: widget.items.length,

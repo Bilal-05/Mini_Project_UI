@@ -216,19 +216,19 @@ class _ProductViewState extends State<ProductView>
                               },
                             )
                           : Container(),
-                      widget.categoryName == 'Chicken' ||
-                              widget.categoryName == 'Beef'
+                      widget.categoryName == 'Beef' ||
+                              widget.categoryName == 'Chicken'
                           ? const SizedBox(
                               width: 10,
                             )
                           : Container(),
-                      widget.categoryName == 'Chicken' ||
-                              widget.categoryName == 'Beef'
+                      widget.categoryName == 'Beef' ||
+                              widget.categoryName == 'Chicken'
                           ? ChoiceChip(
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(25),
                                   side: BorderSide(
-                                      color: (tag == 'Minced')
+                                      color: (tag == 'BBQ')
                                           ? PrimaryColors.primaryOrange
                                           : SecondaryColors.secondaryGrey02,
                                       width: 1)),
@@ -237,22 +237,22 @@ class _ProductViewState extends State<ProductView>
                                 height: 30,
                                 child: Center(
                                     child: Text(
-                                  'Minced',
+                                  'BBQ',
                                   style: TextStyle(
                                       fontFamily: 'Manrope',
                                       fontSize: 14,
-                                      color: (tag == 'Minced')
+                                      color: (tag == 'BBQ')
                                           ? TextColors.textColor1
                                           : SecondaryColors.secondaryGrey02,
                                       fontWeight: FontWeight.w600),
                                 )),
                               ),
-                              selected: (tag == 'Minced') ? true : false,
+                              selected: (tag == 'BBQ') ? true : false,
                               selectedColor: PrimaryColors.primaryOrange,
                               backgroundColor: Colors.transparent,
                               onSelected: (value) {
                                 setState(() {
-                                  tag = 'Minced';
+                                  tag = 'BBQ';
                                   TagList = FilteredList.getFilteredList(
                                       widget.categoryName, tag!);
                                   print(TagList);
@@ -267,7 +267,7 @@ class _ProductViewState extends State<ProductView>
                               width: 10,
                             )
                           : Container(),
-                      widget.categoryName == 'Fruit' ||
+                      widget.categoryName == 'Fruits' ||
                               widget.categoryName == 'Vegetables'
                           ? ChoiceChip(
                               shape: RoundedRectangleBorder(
@@ -347,9 +347,9 @@ class _ProductViewState extends State<ProductView>
                   ),
                 ),
               ),
-              Container(
-                margin: EdgeInsets.fromLTRB(10, 10, 10, 0),
-                child: Expanded(
+              Expanded(
+                child: Container(
+                  margin: const EdgeInsets.only(top: 10, left: 10, right: 10),
                   child: GridView.builder(
                     shrinkWrap: true,
                     itemCount: TagList.length,
@@ -363,6 +363,7 @@ class _ProductViewState extends State<ProductView>
                           margin: const EdgeInsets.all(5),
                           child: ProductCard(
                             TagList: TagList[index],
+                            Index: index,
                           ));
                     },
                   ),

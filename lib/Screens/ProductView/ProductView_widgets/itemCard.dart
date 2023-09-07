@@ -5,21 +5,23 @@ import '../../../Constants/colors.dart';
 
 class ProductCard extends StatelessWidget {
   final Map TagList;
-  const ProductCard({super.key, required this.TagList});
+  final int Index;
+  const ProductCard({super.key, required this.TagList, required this.Index});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
         Navigator.push(
-            context,
-            PageRouteBuilder(
-                transitionDuration: const Duration(milliseconds: 500),
-                reverseTransitionDuration: const Duration(milliseconds: 500),
-                pageBuilder: (context, animation, secondaryAnimation) {
-                  return FadeTransition(
-                      opacity: animation, child: FavoriteView());
-                }));
+          context,
+          PageRouteBuilder(
+            transitionDuration: const Duration(milliseconds: 500),
+            reverseTransitionDuration: const Duration(milliseconds: 500),
+            pageBuilder: (context, animation, secondaryAnimation) {
+              return FadeTransition(opacity: animation, child: FavoriteView());
+            },
+          ),
+        );
       },
       child: Container(
         decoration: BoxDecoration(
@@ -31,48 +33,74 @@ class ProductCard extends StatelessWidget {
           ),
         ),
         child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              child: Image.asset(
-                "${TagList['itemImage']}",
-                height: 160,
-                width: 130,
+            Center(
+              child: Stack(
+                alignment: Alignment.bottomRight,
+                children: [
+                  Container(
+                    child: Image.asset(
+                      "${TagList['itemImage']}",
+                      height: 160,
+                      width: 130,
+                    ),
+                  ),
+                  FloatingActionButton.small(
+                    heroTag: "${{TagList['itemName']}}$Index",
+                    onPressed: () {},
+                    child: Icon(Icons.add),
+                  ),
+                ],
+              ),
+            ),
+            Center(
+              child: Container(
+                margin: const EdgeInsets.only(top: 10),
+                height: 2,
+                width: 140,
+                decoration: BoxDecoration(
+                  color: SecondaryColors.secondaryGrey01,
+                  borderRadius: BorderRadius.circular(5),
+                ),
               ),
             ),
             Container(
-              margin: const EdgeInsets.only(top: 5),
-              height: 2,
-              width: 120,
-              decoration: BoxDecoration(
-                color: SecondaryColors.secondaryGrey01,
-                borderRadius: BorderRadius.circular(5),
-              ),
-            ),
-            Container(
-              margin: const EdgeInsets.only(top: 10),
+              margin: EdgeInsets.only(left: 20, top: 5),
               child: Text(
-                "${TagList['itemName']}",
+                "\$${TagList['itemUnit']}",
                 style: const TextStyle(
                     color: TextColors.textColor3,
-                    fontSize: 16,
+                    fontSize: 20,
                     fontWeight: FontWeight.w600),
               ),
             ),
             Container(
-              margin: const EdgeInsets.only(top: 5),
+              margin: EdgeInsets.only(left: 20, top: 5),
               child: Text(
-                "${TagList['itemOrigin']}",
+                "${TagList['itemName']}",
                 style: const TextStyle(
-                    color: TextColors.textColor2,
-                    fontSize: 14,
+                    color: TextColors.textColor3,
+                    fontSize: 12,
                     fontWeight: FontWeight.w400),
               ),
-            ),
+            )
           ],
         ),
       ),
     );
   }
 }
+
+
+//             
+//             Container(
+//               margin: const EdgeInsets.only(top: 5),
+//               child: Text(
+//                 "${TagList['Tagline']}",
+//                 style: const TextStyle(
+//                     color: TextColors.textColor2,
+//                     fontSize: 14,
+//                     fontWeight: FontWeight.w400),
+//               ),
+//             ),

@@ -11,7 +11,7 @@ class FirstContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.35,
+      height: MediaQuery.of(context).size.height * 0.4,
       color: PrimaryColors.primaryBlue,
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 20),

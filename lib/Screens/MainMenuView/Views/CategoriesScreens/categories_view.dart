@@ -17,12 +17,13 @@ class _CategoryViewState extends State<CategoryView> {
     return Scaffold(
       body: Container(
         child: Column(
-          mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const FirstCategoryContainer(),
-            Products(
-              Categories: Categories.category,
+            FirstCategoryContainer(),
+            Expanded(
+              child: Products(
+                Categories: Categories.category,
+              ),
             ),
           ],
         ),

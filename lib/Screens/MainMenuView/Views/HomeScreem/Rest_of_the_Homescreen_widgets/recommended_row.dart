@@ -28,7 +28,9 @@ class Recommended extends StatelessWidget {
           Container(
             margin: EdgeInsets.only(top: 10),
             height: 230,
+            color: Colors.white,
             child: ListView.builder(
+                physics: BouncingScrollPhysics(),
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
                 itemCount: items.length,
