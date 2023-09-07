@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mini_project/Constants/colors.dart';
-import 'package:mini_project/Functions/getItemMap.dart';
 import 'package:mini_project/Screens/ProductDetailView/ProductDetails-Widgets/reviewTile.dart';
 
 class Reviews extends StatefulWidget {

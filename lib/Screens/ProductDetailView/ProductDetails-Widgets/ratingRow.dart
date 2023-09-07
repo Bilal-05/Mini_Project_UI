@@ -18,8 +18,7 @@ class _RatingRowState extends State<RatingRow> {
     return Row(
       children: [
         RatingBar.builder(
-          initialRating: (widget.ItemDetails[0]["starRating"]),
-          minRating: (widget.ItemDetails[0]["starRating"]),
+          initialRating: (widget.ItemDetails[0]["starRating"].toDouble()),
           direction: Axis.horizontal,
           allowHalfRating: true,
           itemCount: 5,

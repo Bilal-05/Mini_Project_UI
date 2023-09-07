@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mini_project/Constants/colors.dart';
-import 'package:mini_project/Functions/getItemMap.dart';
 
 class NutritionalFact extends StatefulWidget {
   final List ItemDetails;
