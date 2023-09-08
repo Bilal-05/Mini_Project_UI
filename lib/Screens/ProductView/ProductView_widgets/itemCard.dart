@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mini_project/Functions/addToCart.dart';
 import 'package:mini_project/Screens/ProductDetailView/ProductDetail_view.dart';
 
 import '../../../Constants/colors.dart';
@@ -45,8 +46,10 @@ class ProductCard extends StatelessWidget {
                     ),
                   ),
                   FloatingActionButton.small(
-                    heroTag: "${{TagList['itemName']}}$Index",
-                    onPressed: () {},
+                    heroTag: "${TagList['itemName']}$Index",
+                    onPressed: () {
+                      AddToCart.addToCart(TagList['itemName']);
+                    },
                     child: Icon(Icons.add),
                   ),
                 ],

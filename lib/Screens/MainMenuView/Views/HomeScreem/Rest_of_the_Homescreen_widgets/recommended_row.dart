@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mini_project/Constants/colors.dart';
+import 'package:mini_project/Functions/addToCart.dart';
 import 'package:mini_project/Functions/getList.dart';
 import 'package:mini_project/Screens/ProductDetailView/ProductDetail_view.dart';
 
@@ -33,7 +34,7 @@ class _RecommendedState extends State<Recommended> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text(
-            "Hot Deals",
+            "Recommended",
             style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.w400,
@@ -186,8 +187,9 @@ class _RecommendedState extends State<Recommended> {
                                       FloatingActionButton.small(
                                         heroTag: "recommendedbtn$index",
                                         onPressed: () {
-                                          widget.cart.add(index);
-                                          print(widget.cart);
+                                          AddToCart.addToCart(
+                                              RecommendedDeal[index]
+                                                  ['itemName']);
                                         },
                                         child: const FaIcon(
                                           FontAwesomeIcons.plus,

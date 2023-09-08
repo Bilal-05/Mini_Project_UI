@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mini_project/Constants/colors.dart';
 import 'package:mini_project/Functions/getItemNumber.dart';
-import 'package:mini_project/widgets/cartButton.dart';
+import 'package:mini_project/widgets/cartIcon.dart';
 
 class CartAppBar extends StatefulWidget {
   const CartAppBar({super.key});
@@ -43,10 +43,10 @@ class _CartAppBarState extends State<CartAppBar> {
         const Spacer(),
         Container(
           margin: const EdgeInsets.only(left: 10),
-          child: CartIcon(
+          child: CartOnlyIcon(
             itemNumber: GetItemNumber.getItemNumber(),
             iconColor: SecondaryColors.secondaryBlack01,
-            numberCircleColor: TextColors.textColor1,
+            numberCircleColor: PrimaryColors.primaryYellow,
           ),
         ),
       ],

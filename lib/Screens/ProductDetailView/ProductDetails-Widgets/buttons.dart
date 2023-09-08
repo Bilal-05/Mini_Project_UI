@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:mini_project/Constants/colors.dart';
+import 'package:mini_project/Functions/addToCart.dart';
 
-class RoundButton extends StatelessWidget {
-  const RoundButton({super.key});
+class RoundButton extends StatefulWidget {
+  final String itemName;
+  const RoundButton({super.key, required this.itemName});
 
+  @override
+  State<RoundButton> createState() => _RoundButtonState();
+}
+
+class _RoundButtonState extends State<RoundButton> {
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -20,7 +27,9 @@ class RoundButton extends StatelessWidget {
               ),
             ),
           ),
-          onPressed: () {},
+          onPressed: () {
+            AddToCart.addToCart(widget.itemName);
+          },
           child: const Text(
             "Add To Cart",
             style: TextStyle(

@@ -382,12 +382,12 @@ class Products {
       'itemImgs': [ProductImages.Mango],
       'nurtrionalFact':
           'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-      'starRating': 100,
+      'starRating': 5,
       'itemReview': [
         {'reviewerName': 'Rachel Green', 'review': 'WOW', 'starRating': 5},
         {'reviewerName': 'Ross Geller', 'review': 'Wonderful', 'starRating': 5},
       ],
-      'itemUnit': 5,
+      'itemUnit': 100,
       'Tagline': 'Fresh & Organic',
       'Category': 'Fruits',
       'Tags': ['Popular', 'Fresh', 'Recommended']
@@ -418,7 +418,7 @@ class Products {
       'itemImgs': [ProductImages.Stawberry],
       'nurtrionalFact':
           'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-      'starRating': 5,
+      'starRating': 10,
       'itemReview': [
         {'reviewerName': 'Rachel Green', 'review': 'WOW', 'starRating': 5},
         {'reviewerName': 'Ross Geller', 'review': 'Wonderful', 'starRating': 5},

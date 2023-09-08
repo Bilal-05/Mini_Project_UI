@@ -22,5 +22,6 @@ class SecondaryColors {
 class TextColors {
   static const Color textColor1 = Color(0xffFAFBFD);
   static const Color textColor2 = Color(0xffB2BBCE);
-  static const Color textColor3 = Color(0xff1E222B); //primary1
+  static const Color textColor3 = Color(0xff1E222B);
+  static const Color textColor4 = Color(0xff616A7D); //primary1
 }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mini_project/Constants/colors.dart';
+import 'package:mini_project/DataBases/InCart.dart';
+import 'package:mini_project/Functions/addToCart.dart';
 import 'package:mini_project/Functions/getList.dart';
 import 'package:mini_project/Screens/ProductDetailView/ProductDetail_view.dart';
 
@@ -186,8 +188,8 @@ class _HotDealsState extends State<HotDeals> {
                                       FloatingActionButton.small(
                                         heroTag: "hotbtn$index",
                                         onPressed: () {
-                                          widget.cart.add(index);
-                                          print(widget.cart);
+                                          AddToCart.addToCart(
+                                              HotDeal[index]['itemName']);
                                         },
                                         child: const FaIcon(
                                           FontAwesomeIcons.plus,

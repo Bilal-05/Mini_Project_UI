@@ -24,7 +24,6 @@ class _ProductDetailViewState extends State<ProductDetailView> {
   @override
   void initState() {
     ItemDetails = itemDetail.getItemDetails(widget.itemName);
-    print(ItemDetails);
     // TODO: implement initState
     super.initState();
   }
@@ -94,8 +93,11 @@ class _ProductDetailViewState extends State<ProductDetailView> {
                 child: Reviews(ItemDetails: ItemDetails),
               ),
               Container(
-                  margin: const EdgeInsets.only(bottom: 10),
-                  child: const RoundButton())
+                margin: const EdgeInsets.only(bottom: 10),
+                child: RoundButton(
+                  itemName: ItemDetails[0]['itemName'],
+                ),
+              ),
             ],
           ),
         ),

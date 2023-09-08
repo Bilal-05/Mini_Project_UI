@@ -65,7 +65,7 @@ class _ReviewsState extends State<Reviews> {
             (ShowReview)
                 ? Container(
                     width: 360,
-                    height: 72,
+                    height: 150,
                     child: ReviewTile(
                       ItemReview: widget.ItemDetails[0]['itemReview'],
                     ))

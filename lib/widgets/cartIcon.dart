@@ -5,21 +5,21 @@ import 'package:mini_project/Screens/CartView/cart_view.dart';
 
 import '../Constants/colors.dart';
 
-class CartIcon extends StatefulWidget {
+class CartOnlyIcon extends StatefulWidget {
   final Color numberCircleColor;
   final Color iconColor;
   final int itemNumber;
-  const CartIcon(
+  const CartOnlyIcon(
       {super.key,
       required this.itemNumber,
       required this.iconColor,
       required this.numberCircleColor});
 
   @override
-  State<CartIcon> createState() => _CartIconState();
+  State<CartOnlyIcon> createState() => _CartIconState();
 }
 
-class _CartIconState extends State<CartIcon> {
+class _CartIconState extends State<CartOnlyIcon> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,23 +27,11 @@ class _CartIconState extends State<CartIcon> {
         alignment: AlignmentDirectional.topEnd,
         children: [
           SizedBox(
-            width: 40,
-            child: IconButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: ((context) {
-                      return CartView();
-                    }),
-                  ),
-                );
-              },
-              icon: FaIcon(
-                FontAwesomeIcons.bagShopping,
-                color: widget.iconColor,
-                size: 25,
-              ),
+            width: 35,
+            child: FaIcon(
+              FontAwesomeIcons.bagShopping,
+              color: widget.iconColor,
+              size: 30,
             ),
           ),
           Container(
