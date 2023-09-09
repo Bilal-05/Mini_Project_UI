@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mini_project/Functions/Fav.dart';
 import 'package:mini_project/Functions/getItemMap.dart';
 import 'package:mini_project/Screens/ProductDetailView/ProductDetails-Widgets/Appbar_ProductDetails.dart';
 import 'package:mini_project/Screens/ProductDetailView/ProductDetails-Widgets/Details.dart';
@@ -9,6 +10,7 @@ import 'package:mini_project/Screens/ProductDetailView/ProductDetails-Widgets/pr
 import 'package:mini_project/Screens/ProductDetailView/ProductDetails-Widgets/ratingRow.dart';
 
 import '../../Constants/colors.dart';
+import '../../DataBases/FavoriteItem.dart';
 
 class ProductDetailView extends StatefulWidget {
   final String itemName;
@@ -20,10 +22,17 @@ class ProductDetailView extends StatefulWidget {
 
 class _ProductDetailViewState extends State<ProductDetailView> {
   List ItemDetails = [];
+  bool isSelected = false;
 
   @override
   void initState() {
     ItemDetails = itemDetail.getItemDetails(widget.itemName);
+    for (int i = 0; i < Favorite.Fav.length; i++) {
+      if (Favorite.Fav[i]['itemName'] == ItemDetails[0]['itemName']) {
+        isSelected = true;
+      }
+    }
+    // isSelected = FavFunction.isFav(ItemDetails[0]);
     // TODO: implement initState
     super.initState();
   }
@@ -40,18 +49,34 @@ class _ProductDetailViewState extends State<ProductDetailView> {
                 margin: const EdgeInsets.fromLTRB(15, 10, 0, 0),
                 child: DetailsAppBar(itemName: widget.itemName),
               ),
-              Center(
-                child: Container(
-                  child: Container(
-                    height: 300,
-                    child: Padding(
-                      padding: const EdgeInsets.all(30),
-                      child: Image.asset(
-                        ItemDetails[0]['itemImage'],
+              Stack(
+                alignment: AlignmentDirectional.bottomEnd,
+                children: [
+                  Center(
+                    child: Container(
+                      child: Container(
+                        height: 300,
+                        child: Padding(
+                          padding: const EdgeInsets.all(30),
+                          child: Image.asset(
+                            ItemDetails[0]['itemImage'],
+                          ),
+                        ),
                       ),
                     ),
                   ),
-                ),
+                  IconButton(
+                    onPressed: () {
+                      if (isSelected == false) {
+                        FavFunction.addFav(ItemDetails[0]);
+                      }
+                    },
+                    icon: const Icon(
+                      Icons.favorite,
+                      color: Colors.red,
+                    ),
+                  ),
+                ],
               ),
               Container(
                 margin: const EdgeInsets.fromLTRB(15, 10, 0, 0),

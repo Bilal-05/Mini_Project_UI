@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:mini_project/Functions/getItemNumber.dart';
 import 'package:mini_project/Screens/CartView/cart_view.dart';
 
 import '../Constants/colors.dart';

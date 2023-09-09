@@ -36,4 +36,6 @@ class ProductImages {
   static String Tomato = 'assets/Veg/Tomato.png';
   static String VegBundle = 'assets/Veg/Bundle.png';
   static String Sale = "assets/navbar/Sale.png";
+  static String heartSelected = 'assets/navbar/HeartSelected.svg';
+  static String heartUnselected = 'assets/navbar/HeartUnselected.svg';
 }

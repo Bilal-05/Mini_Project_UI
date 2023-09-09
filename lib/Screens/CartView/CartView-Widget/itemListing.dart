@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mini_project/Constants/colors.dart';
 import 'package:mini_project/DataBases/InCart.dart';
-import 'package:mini_project/Functions/getItemMap.dart';
 import 'package:mini_project/Functions/getSubtotal.dart';
 import 'package:mini_project/Screens/CartView/CartView-Widget/seeMore.dart';
 
@@ -169,7 +168,7 @@ class _CustomListTileState extends State<CustomListTile> {
                 Cart.inCart.length > 3
                     ? InkWell(
                         onTap: () {
-                          Navigator.pushReplacement(
+                          Navigator.push(
                             context,
                             PageRouteBuilder(
                               transitionDuration:
