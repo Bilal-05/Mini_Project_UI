@@ -1,7 +1,4 @@
-import 'package:flutter/material.dart';
 import 'package:mini_project/DataBases/FavoriteItem.dart';
-
-import '../DataBases/InCart.dart';
 
 class FavFunction {
   static addFav(Map itemDetails) {
