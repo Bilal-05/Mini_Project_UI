@@ -185,6 +185,7 @@ class _FavoriteViewState extends State<FavoriteView> {
                     ),
                   )
                 : Container(
+                    height: MediaQuery.of(context).size.height * 0.3,
                     child: Center(
                       child: Text(
                         'Favorite is Empty',
