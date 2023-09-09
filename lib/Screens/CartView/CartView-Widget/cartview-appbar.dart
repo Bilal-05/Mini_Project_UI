@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mini_project/Constants/colors.dart';
 import 'package:mini_project/Functions/getItemNumber.dart';
 import 'package:mini_project/widgets/cartIcon.dart';
@@ -33,20 +34,20 @@ class _CartAppBarState extends State<CartAppBar> {
           child: const Center(child: BackButton()),
         ),
         const SizedBox(width: 20),
-        Text(
-          'Shopping Cart (${GetItemNumber.getItemNumber()})',
-          style: const TextStyle(
+        const Text(
+          'Shopping Cart',
+          style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w400,
               color: TextColors.textColor3),
         ),
         const Spacer(),
         Container(
-          margin: const EdgeInsets.only(left: 10),
-          child: CartOnlyIcon(
-            itemNumber: GetItemNumber.getItemNumber(),
-            iconColor: SecondaryColors.secondaryBlack01,
-            numberCircleColor: PrimaryColors.primaryYellow,
+          margin: const EdgeInsets.only(left: 10, right: 10),
+          child: const FaIcon(
+            FontAwesomeIcons.bagShopping,
+            color: TextColors.textColor3,
+            size: 25,
           ),
         ),
       ],

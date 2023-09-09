@@ -12,6 +12,4 @@ class SubTotal {
 
     return subTotal;
   }
-
-  static int Subtotal = getSubTotal();
 }

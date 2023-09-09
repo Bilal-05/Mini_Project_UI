@@ -41,7 +41,7 @@ class _ProductViewState extends State<ProductView>
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                margin: EdgeInsets.fromLTRB(15, 10, 10, 0),
+                margin: EdgeInsets.fromLTRB(15, 10, 0, 0),
                 child: ProductAppBar(
                   categoryName: widget.categoryName,
                 ),
