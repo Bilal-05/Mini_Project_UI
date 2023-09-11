@@ -30,7 +30,7 @@ class _CartAppBarState extends State<CartAppBar> {
               ),
             ],
           ),
-          child: const Center(child: CartBackButton()),
+          child: const Center(child: BackButton()),
         ),
         const SizedBox(width: 20),
         const Text(

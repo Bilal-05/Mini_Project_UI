@@ -173,8 +173,8 @@ class _CustomListTileState extends State<CustomListTile> {
                 ),
                 Cart.inCart.length > 3
                     ? InkWell(
-                        onTap: () {
-                          Navigator.push(
+                        onTap: () async {
+                          await Navigator.push(
                             context,
                             PageRouteBuilder(
                               transitionDuration:
@@ -190,6 +190,9 @@ class _CustomListTileState extends State<CustomListTile> {
                               },
                             ),
                           );
+                          setState(() {
+                            subTotal = SubTotal.getSubTotal();
+                          });
                         },
                         child: Container(
                           margin: const EdgeInsets.symmetric(horizontal: 30),

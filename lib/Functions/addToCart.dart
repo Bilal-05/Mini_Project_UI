@@ -24,7 +24,6 @@ class AddToCart {
       ToAdd['itemUnit'] = ItemDetails[0]['itemUnit'];
       ToAdd['itemImage'] = ItemDetails[0]['itemImage'];
       Cart.inCart.add(ToAdd);
-      print(Cart.inCart);
     } else {
       for (int i = 0; i < Cart.inCart.length; i++) {
         if (Cart.inCart[i]['itemName'] == itemName) {

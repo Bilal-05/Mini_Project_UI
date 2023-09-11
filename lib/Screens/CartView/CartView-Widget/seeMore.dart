@@ -117,12 +117,8 @@ class _SeeMoreState extends State<SeeMore> {
                                             Cart.inCart.removeAt(index);
                                             text = 'Cart is Empty';
                                           }
-                                          if (Cart.inCart.isEmpty) {
-                                            Navigator.popUntil(
-                                                context,
-                                                ModalRoute.withName(
-                                                    '/firstscreen'));
-                                            Cart.inCart = [];
+                                          if (Cart.inCart.length == 3) {
+                                            Navigator.pop(context);
                                           }
                                         });
                                       },
