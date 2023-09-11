@@ -5,6 +5,8 @@ import 'package:mini_project/DataBases/InCart.dart';
 import 'package:mini_project/Functions/getSubtotal.dart';
 import 'package:mini_project/Screens/CartView/CartView-Widget/cartview-appbar.dart';
 
+import '../../../DataBases/Product.dart';
+
 class SeeMore extends StatefulWidget {
   const SeeMore({super.key});
 
@@ -29,8 +31,12 @@ class _SeeMoreState extends State<SeeMore> {
   @override
   void initState() {
     ViewCart = Cart.inCart;
-    for (int i = 0; i < Cart.inCart.length; i++) {
-      OriginalPrice.add(Cart.inCart[i]['itemUnit']);
+    for (int i = 0; i < Products.items.length; i++) {
+      for (int j = 0; j < Cart.inCart.length; j++) {
+        if (Products.items[i]['itemName'] == Cart.inCart[j]["itemName"]) {
+          OriginalPrice.add(Products.items[i]['itemUnit']);
+        }
+      }
     }
     subTotal = SubTotal.getSubTotal();
     // TODO: implement initState
@@ -103,9 +109,8 @@ class _SeeMoreState extends State<SeeMore> {
                                               Cart.inCart[index]['Quantity'] -
                                                   1;
                                           Cart.inCart[index]['itemUnit'] =
-                                              OriginalPrice[index] *
-                                                  Cart.inCart[index]
-                                                      ['Quantity'];
+                                              Cart.inCart[index]['itemUnit'] -
+                                                  OriginalPrice[index];
                                           subTotal = SubTotal.getSubTotal();
                                           if (Cart.inCart[index]['Quantity'] ==
                                               0) {
@@ -141,9 +146,8 @@ class _SeeMoreState extends State<SeeMore> {
                                                 Cart.inCart[index]['Quantity'] +
                                                     1;
                                             Cart.inCart[index]['itemUnit'] =
-                                                OriginalPrice[index] *
-                                                    Cart.inCart[index]
-                                                        ['Quantity'];
+                                                Cart.inCart[index]['itemUnit'] +
+                                                    OriginalPrice[index];
                                             subTotal = SubTotal.getSubTotal();
                                           },
                                         );

@@ -18,6 +18,7 @@ class Products {
       'itemUnit': 300,
       'Tagline': 'From Sea',
       'Category': 'Fish',
+      'isFav': false,
       'Tags': [
         'Popular',
         'Small Fishes',
@@ -42,6 +43,7 @@ class Products {
       'itemUnit': 50,
       'Tagline': 'Organic',
       'Category': 'Chicken',
+      'isFav': false,
       'Tags': ['Popular', 'Low Price', 'Free Delivery', 'BBQ', 'HotDeal']
     },
     {
@@ -60,6 +62,7 @@ class Products {
       'itemUnit': 150,
       'Tagline': 'Organic',
       'Category': 'Beef',
+      'isFav': false,
       'Tags': ['Popular', 'Free Delivery', 'Recommended']
     },
     {
@@ -78,6 +81,7 @@ class Products {
       'itemUnit': 90,
       'Tagline': 'From Sea',
       'Category': 'Fish',
+      'isFav': false,
       'Tags': ['Popular', 'Big Fishes', 'Free Delivery', 'Recommended']
     },
     {
@@ -96,6 +100,7 @@ class Products {
       'itemUnit': 80,
       'Tagline': 'From Sea',
       'Category': 'Fish',
+      'isFav': false,
       'Tags': [
         'Popular',
         'Small Fishes',
@@ -120,6 +125,7 @@ class Products {
       'itemUnit': 40,
       'Tagline': 'From Sea',
       'Category': 'Fish',
+      'isFav': false,
       'Tags': ['Popular', 'Small Fishes', 'Free Delivery', 'Low Price']
     },
     {
@@ -138,6 +144,7 @@ class Products {
       'itemUnit': 100,
       'Tagline': 'Organic',
       'Category': 'Chicken',
+      'isFav': false,
       'Tags': ['Popular', 'Free Delivery', 'BBQ', 'HotDeal']
     },
     {
@@ -156,6 +163,7 @@ class Products {
       'itemUnit': 5,
       'Tagline': 'Organic',
       'Category': 'Chicken',
+      'isFav': false,
       'Tags': ['Popular', 'Low Price', 'Free Delivery', 'BBQ']
     },
     {
@@ -174,6 +182,7 @@ class Products {
       'itemUnit': 8,
       'Tagline': 'Organic',
       'Category': 'Chicken',
+      'isFav': false,
       'Tags': ['Popular', 'Low Price', 'Free Delivery', 'BBQ']
     },
     {
@@ -192,6 +201,7 @@ class Products {
       'itemUnit': 15,
       'Tagline': 'Organic',
       'Category': 'Chicken',
+      'isFav': false,
       'Tags': ['Popular', 'Low Price', 'Free Delivery']
     },
     {
@@ -210,6 +220,7 @@ class Products {
       'itemUnit': 10,
       'Tagline': 'Organic',
       'Category': 'Chicken',
+      'isFav': false,
       'Tags': ['Popular', 'Low Price', 'Free Delivery', 'Recommended']
     },
     {
@@ -228,6 +239,7 @@ class Products {
       'itemUnit': 35,
       'Tagline': 'Organic',
       'Category': 'Beef',
+      'isFav': false,
       'Tags': ['Popular', 'Low Price', 'Free Delivery', 'BBQ']
     },
     {
@@ -246,6 +258,7 @@ class Products {
       'itemUnit': 80,
       'Tagline': 'Organic',
       'Category': 'Beef',
+      'isFav': false,
       'Tags': ['Popular', 'Free Delivery', 'BBQ']
     },
     {
@@ -264,6 +277,7 @@ class Products {
       'itemUnit': 20,
       'Tagline': 'Organic',
       'Category': 'Beef',
+      'isFav': false,
       'Tags': ['Popular', 'Low Price', 'Free Delivery', 'BBQ']
     },
     {
@@ -282,6 +296,7 @@ class Products {
       'itemUnit': 5,
       'Tagline': 'Organic',
       'Category': 'Beef',
+      'isFav': false,
       'Tags': ['Popular', 'Low Price', 'Free Delivery']
     },
     {
@@ -300,6 +315,7 @@ class Products {
       'itemUnit': 10,
       'Tagline': 'Fresh & Organic',
       'Category': 'Fruits',
+      'isFav': false,
       'Tags': ['Popular', 'Low Price', 'Free Delivery', 'Fresh', 'Recommended']
     },
     {
@@ -318,6 +334,7 @@ class Products {
       'itemUnit': 25,
       'Tagline': 'Fresh & Organic',
       'Category': 'Fruits',
+      'isFav': false,
       'Tags': ['Popular', 'Free Delivery', 'Fresh']
     },
     {
@@ -336,6 +353,7 @@ class Products {
       'itemUnit': 15,
       'Tagline': 'Fresh & Organic',
       'Category': 'Fruits',
+      'isFav': false,
       'Tags': ['Popular', 'Free Delivery', 'Fresh']
     },
     {
@@ -354,6 +372,7 @@ class Products {
       'itemUnit': 5,
       'Tagline': 'Fresh & Organic',
       'Category': 'Fruits',
+      'isFav': false,
       'Tags': ['Low Price', 'Fresh']
     },
     {
@@ -372,6 +391,7 @@ class Products {
       'itemUnit': 12,
       'Tagline': 'Fresh & Organic',
       'Category': 'Fruits',
+      'isFav': false,
       'Tags': ['Popular', 'Fresh']
     },
     {
@@ -390,6 +410,7 @@ class Products {
       'itemUnit': 100,
       'Tagline': 'Fresh & Organic',
       'Category': 'Fruits',
+      'isFav': false,
       'Tags': ['Popular', 'Fresh', 'Recommended']
     },
     {
@@ -408,6 +429,7 @@ class Products {
       'itemUnit': 18,
       'Tagline': 'Fresh & Organic',
       'Category': 'Fruits',
+      'isFav': false,
       'Tags': ['Free Delivery', 'Fresh']
     },
     {
@@ -426,6 +448,7 @@ class Products {
       'itemUnit': 10,
       'Tagline': 'Fresh & Organic',
       'Category': 'Fruits',
+      'isFav': false,
       'Tags': ['Low Price', 'Free Delivery', 'Fresh']
     },
     {
@@ -444,6 +467,7 @@ class Products {
       'itemUnit': 4,
       'Tagline': 'Fresh & Organic',
       'Category': 'Fruits',
+      'isFav': false,
       'Tags': ['Popular', 'Low Price', 'Free Delivery', 'Fresh']
     },
     {
@@ -462,6 +486,7 @@ class Products {
       'itemUnit': 2,
       'Tagline': 'Fresh & Organic',
       'Category': 'Vegetables',
+      'isFav': false,
       'Tags': ['Popular', 'Low Price', 'Free Delivery', 'Fresh']
     },
     {
@@ -480,6 +505,7 @@ class Products {
       'itemUnit': 3,
       'Tagline': 'Fresh & Organic',
       'Category': 'Vegetables',
+      'isFav': false,
       'Tags': ['Popular', 'Low Price', 'Free Delivery', 'Fresh']
     },
     {
@@ -498,6 +524,7 @@ class Products {
       'itemUnit': 5,
       'Tagline': 'Fresh & Organic',
       'Category': 'Vegetables',
+      'isFav': false,
       'Tags': ['Popular', 'Low Price', 'Free Delivery', 'Fresh']
     },
     {
@@ -516,6 +543,7 @@ class Products {
       'itemUnit': 5,
       'Tagline': 'Fresh & Organic',
       'Category': 'Vegetables',
+      'isFav': false,
       'Tags': ['Popular', 'Low Price', 'Free Delivery', 'Fresh']
     },
     {
@@ -534,6 +562,7 @@ class Products {
       'itemUnit': 100,
       'Tagline': 'Fresh & Organic',
       'Category': 'Vegetables',
+      'isFav': false,
       'Tags': ['Popular', 'Free Delivery', 'Fresh', 'HotDeal']
     },
   ];

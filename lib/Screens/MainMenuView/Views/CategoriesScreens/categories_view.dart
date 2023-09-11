@@ -17,6 +17,7 @@ class _CategoryViewState extends State<CategoryView> {
     return Scaffold(
       body: Container(
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             FirstCategoryContainer(),

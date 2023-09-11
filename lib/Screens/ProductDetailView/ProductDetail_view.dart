@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mini_project/Functions/Fav.dart';
 import 'package:mini_project/Functions/getItemMap.dart';
 import 'package:mini_project/Screens/ProductDetailView/ProductDetails-Widgets/Appbar_ProductDetails.dart';
 import 'package:mini_project/Screens/ProductDetailView/ProductDetails-Widgets/Details.dart';
@@ -11,6 +10,7 @@ import 'package:mini_project/Screens/ProductDetailView/ProductDetails-Widgets/ra
 
 import '../../Constants/colors.dart';
 import '../../DataBases/FavoriteItem.dart';
+import '../../DataBases/Product.dart';
 
 class ProductDetailView extends StatefulWidget {
   final String itemName;
@@ -23,15 +23,15 @@ class ProductDetailView extends StatefulWidget {
 class _ProductDetailViewState extends State<ProductDetailView> {
   List ItemDetails = [];
   bool isSelected = false;
+  Map item = {};
 
   @override
   void initState() {
-    ItemDetails = itemDetail.getItemDetails(widget.itemName);
-    for (int i = 0; i < Favorite.Fav.length; i++) {
-      if (Favorite.Fav[i]['itemName'] == ItemDetails[0]['itemName']) {
-        isSelected = true;
-      }
-    }
+    setState(() {
+      ItemDetails = itemDetail.getItemDetails(widget.itemName);
+      // print(ItemDetails);
+    });
+
     // isSelected = FavFunction.isFav(ItemDetails[0]);
     // TODO: implement initState
     super.initState();
@@ -67,13 +67,47 @@ class _ProductDetailViewState extends State<ProductDetailView> {
                   ),
                   IconButton(
                     onPressed: () {
-                      if (isSelected == false) {
-                        FavFunction.addFav(ItemDetails[0]);
-                      }
+                      setState(
+                        () {
+                          if (ItemDetails[0]['isFav'] == true) {
+                            for (int i = 0; i < Products.items.length; i++) {
+                              if (ItemDetails[0]['itemName'] ==
+                                  Products.items[i]['itemName']) {
+                                Products.items[i]['isFav'] = false;
+                                isSelected = false;
+                              }
+                            }
+
+                            for (int i = 0; i < Favorite.Fav.length; i++) {
+                              if (Favorite.Fav[i]['itemName'] ==
+                                  ItemDetails[0]['itemName']) {
+                                Favorite.Fav.removeAt(i);
+                                print(Favorite.Fav);
+                              }
+                            }
+                          } else {
+                            for (int i = 0; i < Products.items.length; i++) {
+                              if (ItemDetails[0]['itemName'] ==
+                                  Products.items[i]['itemName']) {
+                                Products.items[i]['isFav'] = true;
+                                isSelected = true;
+                              }
+                            }
+                            item['itemName'] = ItemDetails[0]['itemName'];
+                            item['itemUnit'] = ItemDetails[0]['itemUnit'];
+                            item['itemImage'] = ItemDetails[0]['itemImage'];
+                            item['itemFav'] = ItemDetails[0]['isFav'];
+                            Favorite.Fav.add(item);
+                            print(Favorite.Fav);
+                          }
+                        },
+                      );
                     },
-                    icon: const Icon(
+                    icon: Icon(
                       Icons.favorite,
-                      color: Colors.red,
+                      color: ItemDetails[0]['isFav'] == true
+                          ? Colors.red
+                          : Colors.black,
                     ),
                   ),
                 ],

@@ -13,6 +13,15 @@ class FirstContainer extends StatefulWidget {
 }
 
 class _FirstContainerState extends State<FirstContainer> {
+  int number = 0;
+
+  @override
+  void initState() {
+    number = GetItemNumber.getItemNumber();
+    // TODO: implement initState
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,7 +36,7 @@ class _FirstContainerState extends State<FirstContainer> {
             Container(
               margin: const EdgeInsets.only(top: 52),
               child: FirstRow(
-                itemNumber: GetItemNumber.getItemNumber(),
+                itemNumber: number,
               ),
             ),
             Container(

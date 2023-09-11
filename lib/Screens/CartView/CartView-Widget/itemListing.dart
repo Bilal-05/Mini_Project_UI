@@ -5,6 +5,8 @@ import 'package:mini_project/DataBases/InCart.dart';
 import 'package:mini_project/Functions/getSubtotal.dart';
 import 'package:mini_project/Screens/CartView/CartView-Widget/seeMore.dart';
 
+import '../../../DataBases/Product.dart';
+
 class CustomListTile extends StatefulWidget {
   const CustomListTile({
     super.key,
@@ -29,8 +31,12 @@ class _CustomListTileState extends State<CustomListTile> {
   String text = 'Cart is Empty';
   @override
   void initState() {
-    for (int i = 0; i < Cart.inCart.length; i++) {
-      OriginalPrice.add(Cart.inCart[i]['itemUnit']);
+    for (int i = 0; i < Products.items.length; i++) {
+      for (int j = 0; j < Cart.inCart.length; j++) {
+        if (Products.items[i]['itemName'] == Cart.inCart[j]["itemName"]) {
+          OriginalPrice.add(Products.items[i]['itemUnit']);
+        }
+      }
     }
     subTotal = SubTotal.getSubTotal();
 
@@ -113,9 +119,9 @@ class _CustomListTileState extends State<CustomListTile> {
                                                 Cart.inCart[index]['Quantity'] -
                                                     1;
                                             Cart.inCart[index]['itemUnit'] =
-                                                OriginalPrice[index] *
-                                                    Cart.inCart[index]
-                                                        ['Quantity'];
+                                                Cart.inCart[index]['itemUnit'] -
+                                                    OriginalPrice[index];
+
                                             subTotal = SubTotal.getSubTotal();
                                             if (Cart.inCart[index]
                                                     ['Quantity'] ==
@@ -147,9 +153,9 @@ class _CustomListTileState extends State<CustomListTile> {
                                                           ['Quantity'] +
                                                       1;
                                               Cart.inCart[index]['itemUnit'] =
-                                                  OriginalPrice[index] *
-                                                      Cart.inCart[index]
-                                                          ['Quantity'];
+                                                  Cart.inCart[index]
+                                                          ['itemUnit'] +
+                                                      OriginalPrice[index];
                                               subTotal = SubTotal.getSubTotal();
                                             },
                                           );

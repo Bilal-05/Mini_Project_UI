@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mini_project/Constants/colors.dart';
-import 'package:mini_project/Functions/Fav.dart';
-import 'package:mini_project/Functions/getItemMap.dart';
+import 'package:mini_project/DataBases/Product.dart';
 import 'package:mini_project/Screens/ProductDetailView/ProductDetail_view.dart';
 
 import '../../../../../DataBases/FavoriteItem.dart';
@@ -14,29 +13,7 @@ class FavoriteView extends StatefulWidget {
 }
 
 class _FavoriteViewState extends State<FavoriteView> {
-  List ItemDetails = [];
   bool isSelected = false;
-
-  @override
-  void initState() {
-    if (Favorite.Fav.length == 1) {
-      ItemDetails = itemDetail.getItemDetails(Favorite.Fav[0]['itemName']);
-    } else if (Favorite.Fav.length > 1) {
-      ItemDetails = itemDetail
-          .getItemDetails(Favorite.Fav[Favorite.Fav.length - 1]['itemName']);
-    }
-
-    if (Favorite.Fav.isNotEmpty) {
-      for (int i = 0; i < Favorite.Fav.length; i++) {
-        if (Favorite.Fav[i]['itemName'] == ItemDetails[0]['itemName']) {
-          isSelected = true;
-        }
-      }
-    }
-    // isSelected = FavFunction.isFav(ItemDetails[0]);
-    // TODO: implement initState
-    super.initState();
-  }
 
   TextStyle fav = const TextStyle(
       fontSize: 25, fontWeight: FontWeight.w700, color: TextColors.textColor3);
@@ -47,24 +24,22 @@ class _FavoriteViewState extends State<FavoriteView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        height: 800,
+      appBar: AppBar(
+        backgroundColor: PrimaryColors.primaryBlue,
+        automaticallyImplyLeading: false,
+        title: Text(
+          'Favorite Items (${Favorite.Fav.length})',
+          style: const TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.w700,
+              color: TextColors.textColor1),
+        ),
+      ),
+      body: SizedBox(
+        // height: 800,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Container(
-              height: 110,
-              color: PrimaryColors.primaryBlue,
-              child: Center(
-                child: Text(
-                  'Favorite Items (${Favorite.Fav.length})',
-                  style: const TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.w700,
-                      color: TextColors.textColor1),
-                ),
-              ),
-            ),
             Favorite.Fav.isNotEmpty
                 ? Expanded(
                     flex: 1,
@@ -77,8 +52,8 @@ class _FavoriteViewState extends State<FavoriteView> {
                           return Hero(
                             tag: 'Fav$index',
                             child: InkWell(
-                              onTap: () {
-                                Navigator.push(
+                              onTap: () async {
+                                await Navigator.push(
                                   context,
                                   PageRouteBuilder(
                                     transitionDuration:
@@ -96,9 +71,11 @@ class _FavoriteViewState extends State<FavoriteView> {
                                     },
                                   ),
                                 );
+                                setState(() {});
                               },
                               child: Container(
-                                margin: EdgeInsets.only(left: 20, bottom: 15),
+                                margin:
+                                    const EdgeInsets.only(left: 20, bottom: 15),
                                 child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
@@ -122,51 +99,32 @@ class _FavoriteViewState extends State<FavoriteView> {
                                             style: itemNames,
                                           ),
                                           Text(
-                                            Favorite.Fav[index]['Tagline'],
+                                            "\$${Favorite.Fav[index]['itemUnit']}",
                                             style: itemTag,
                                           ),
                                         ],
                                       ),
                                     ),
-                                    Spacer(),
+                                    const Spacer(),
                                     Container(
-                                      margin: EdgeInsets.only(right: 20),
+                                      margin: const EdgeInsets.only(right: 20),
                                       child: IconButton(
                                         onPressed: () {
-                                          if (isSelected == true) {
-                                            setState(
-                                              () {
-                                                FavFunction.removeFav(
-                                                    ItemDetails[0], index);
-                                                if (Favorite.Fav.length == 1) {
-                                                  ItemDetails =
-                                                      itemDetail.getItemDetails(
-                                                          Favorite.Fav[0]
-                                                              ['itemName']);
-                                                } else if (Favorite.Fav.length >
-                                                    1) {
-                                                  ItemDetails =
-                                                      itemDetail.getItemDetails(
-                                                          Favorite.Fav[Favorite
-                                                                  .Fav.length -
-                                                              1]['itemName']);
-                                                }
-
-                                                // if (Favorite.Fav.isNotEmpty) {
-                                                //   for (int i = 0;
-                                                //       i < Favorite.Fav.length;
-                                                //       i++) {
-                                                //     if (Favorite.Fav[i]
-                                                //             ['itemName'] ==
-                                                //         ItemDetails[0]
-                                                //             ['itemName']) {
-                                                //       isSelected = true;
-                                                //     }
-                                                //   }
-                                                // }
-                                              },
-                                            );
-                                          }
+                                          setState(() {
+                                            for (int i = 0;
+                                                i < Products.items.length;
+                                                i++) {
+                                              if (Favorite.Fav[index]
+                                                      ['itemName'] ==
+                                                  Products.items[i]
+                                                      ['itemName']) {
+                                                Products.items[i]['isFav'] =
+                                                    false;
+                                                Favorite.Fav.removeAt(index);
+                                                break;
+                                              }
+                                            }
+                                          });
                                         },
                                         icon: const Icon(
                                           Icons.favorite,
@@ -184,7 +142,7 @@ class _FavoriteViewState extends State<FavoriteView> {
                       ),
                     ),
                   )
-                : Container(
+                : SizedBox(
                     height: MediaQuery.of(context).size.height * 0.3,
                     child: Center(
                       child: Text(

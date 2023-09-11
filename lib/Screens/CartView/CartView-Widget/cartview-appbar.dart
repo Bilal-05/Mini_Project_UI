@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mini_project/Constants/colors.dart';
+import 'package:mini_project/widgets/cartBackButton.dart';
 
 class CartAppBar extends StatefulWidget {
   const CartAppBar({super.key});
@@ -29,7 +30,7 @@ class _CartAppBarState extends State<CartAppBar> {
               ),
             ],
           ),
-          child: const Center(child: BackButton()),
+          child: const Center(child: CartBackButton()),
         ),
         const SizedBox(width: 20),
         const Text(

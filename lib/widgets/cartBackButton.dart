@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 import '../Constants/colors.dart';
 
-class BackButton extends StatelessWidget {
-  const BackButton({super.key});
+class CartBackButton extends StatelessWidget {
+  const CartBackButton({super.key});
 
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      onPressed: () async {
-        Navigator.pop(context);
+      onPressed: () {
+        Navigator.popUntil(context, ModalRoute.withName('/firstscreen'));
       },
       icon: const Center(
         child: Icon(

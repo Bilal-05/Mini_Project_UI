@@ -15,7 +15,7 @@ class Products extends StatelessWidget {
         itemCount: Categories.length,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
-            mainAxisSpacing: 2,
+            mainAxisSpacing: 10,
             crossAxisSpacing: 2,
             childAspectRatio: 0.75),
         itemBuilder: ((context, index) {
@@ -41,13 +41,29 @@ class Products extends StatelessWidget {
             child: Container(
               margin: const EdgeInsets.all(5),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                color: TextColors.textColor1,
-                border: Border.all(
-                  width: 0.5,
-                  color: TextColors.textColor2,
-                ),
-              ),
+                  borderRadius: BorderRadius.circular(12),
+                  color: TextColors.textColor1,
+                  border: Border.all(
+                    width: 0.5,
+                    color: TextColors.textColor2,
+                  ),
+                  boxShadow: const [
+                    BoxShadow(
+                      color: TextColors.textColor2,
+                      offset: Offset(
+                        5.0,
+                        5.0,
+                      ),
+                      blurRadius: 10.0,
+                      spreadRadius: .5,
+                    ), //BoxShadow
+                    BoxShadow(
+                      color: Colors.white,
+                      offset: Offset(0.0, 0.0),
+                      blurRadius: 0.0,
+                      spreadRadius: 0.0,
+                    ),
+                  ]),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -60,12 +76,12 @@ class Products extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    margin: const EdgeInsets.only(top: 5),
-                    height: 2,
-                    width: 120,
-                    decoration: BoxDecoration(
-                      color: SecondaryColors.secondaryGrey01,
-                      borderRadius: BorderRadius.circular(5),
+                    margin: EdgeInsets.symmetric(horizontal: 10),
+                    child: Divider(
+                      indent: 10,
+                      endIndent: 10,
+                      thickness: 1,
+                      color: SecondaryColors.secondaryGrey00.withOpacity(0.8),
                     ),
                   ),
                   Container(

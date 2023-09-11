@@ -30,7 +30,7 @@ class AddToCart {
         if (Cart.inCart[i]['itemName'] == itemName) {
           Cart.inCart[i]['Quantity'] = Cart.inCart[i]['Quantity'] + 1;
           Cart.inCart[i]['itemUnit'] =
-              OriginalPrice * Cart.inCart[i]['Quantity'];
+              OriginalPrice + Cart.inCart[i]['itemUnit'];
         }
       }
     }

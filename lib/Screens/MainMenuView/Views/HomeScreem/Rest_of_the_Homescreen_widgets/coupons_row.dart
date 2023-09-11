@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mini_project/Constants/colors.dart';
+import 'package:mini_project/Screens/MainMenuView/Views/CategoriesScreens/categories_view.dart';
+import 'package:page_transition/page_transition.dart';
 
 class Coupons extends StatelessWidget {
   const Coupons({super.key});
@@ -17,7 +19,15 @@ class Coupons extends StatelessWidget {
     List<String> orderNo = ["3", "2"];
 
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+          context,
+          PageTransition(
+            type: PageTransitionType.leftToRight,
+            child: CategoryView(),
+          ),
+        );
+      },
       child: Container(
         height: 180,
         color: Colors.white,
