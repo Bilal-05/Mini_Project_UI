@@ -4,6 +4,7 @@ import 'package:mini_project/Constants/colors.dart';
 import 'package:mini_project/Functions/addToCart.dart';
 import 'package:mini_project/Functions/getList.dart';
 import 'package:mini_project/Screens/ProductDetailView/ProductDetail_view.dart';
+import 'package:mini_project/toast/customToast.dart';
 
 class HotDeals extends StatefulWidget {
   final List cart;
@@ -110,7 +111,7 @@ class _HotDealsState extends State<HotDeals> {
                                   height: 2,
                                 ),
                                 Container(
-                                  margin: EdgeInsets.only(top: 5),
+                                  margin: const EdgeInsets.only(top: 5),
                                   child: Text(
                                     HotDeal[index]['itemName'],
                                     style: const TextStyle(
@@ -119,7 +120,8 @@ class _HotDealsState extends State<HotDeals> {
                                   ),
                                 ),
                                 Container(
-                                  margin: EdgeInsets.only(top: 2, bottom: 5),
+                                  margin:
+                                      const EdgeInsets.only(top: 2, bottom: 5),
                                   child: Text(
                                     HotDeal[index]['Tagline'],
                                     style: const TextStyle(
@@ -189,6 +191,8 @@ class _HotDealsState extends State<HotDeals> {
                                         onPressed: () {
                                           AddToCart.addToCart(
                                               HotDeal[index]['itemName']);
+                                          CustomToast.showToast(
+                                              'Item Added to Cart');
                                         },
                                         child: const FaIcon(
                                           FontAwesomeIcons.plus,

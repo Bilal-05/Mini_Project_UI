@@ -24,6 +24,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
       itemCount: screenNo.length,
       itemBuilder: (BuildContext context, int index) {
         return Scaffold(
+          resizeToAvoidBottomInset: false,
           backgroundColor: PrimaryColors.primaryBlue,
           body: SafeArea(
             child: Center(

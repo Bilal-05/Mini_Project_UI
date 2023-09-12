@@ -3,7 +3,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mini_project/Constants/colors.dart';
 import 'package:mini_project/DataBases/InCart.dart';
 import 'package:mini_project/Functions/getSubtotal.dart';
-import 'package:mini_project/Screens/CartView/CartView-Widget/seeMore.dart';
+import 'package:mini_project/Screens/cartView/CartView-Widget/seeMore.dart';
+import 'package:mini_project/Screens/checkoutView/checkout_view.dart';
 
 import '../../../DataBases/Product.dart';
 
@@ -31,13 +32,14 @@ class _CustomListTileState extends State<CustomListTile> {
   String text = 'Cart is Empty';
   @override
   void initState() {
-    for (int i = 0; i < Products.items.length; i++) {
-      for (int j = 0; j < Cart.inCart.length; j++) {
-        if (Products.items[i]['itemName'] == Cart.inCart[j]["itemName"]) {
-          OriginalPrice.add(Products.items[i]['itemUnit']);
+    for (int i = 0; i < Cart.inCart.length; i++) {
+      for (int j = 0; j < Products.items.length; j++) {
+        if (Cart.inCart[i]['itemName'] == Products.items[j]["itemName"]) {
+          OriginalPrice.add(Products.items[j]['itemUnit']);
         }
       }
     }
+    print(OriginalPrice);
     subTotal = SubTotal.getSubTotal();
 
     // TODO: implement initState
@@ -193,6 +195,7 @@ class _CustomListTileState extends State<CustomListTile> {
                           setState(() {
                             subTotal = SubTotal.getSubTotal();
                           });
+                          setState(() {});
                         },
                         child: Container(
                           margin: const EdgeInsets.symmetric(horizontal: 30),
@@ -279,23 +282,33 @@ class _CustomListTileState extends State<CustomListTile> {
                                 Container(
                                   margin: EdgeInsets.only(top: 20),
                                   child: ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-                                          backgroundColor:
-                                              PrimaryColors.primaryBlue,
-                                          shape: const RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.all(
-                                              Radius.circular(20),
-                                            ),
+                                    style: ElevatedButton.styleFrom(
+                                        backgroundColor:
+                                            PrimaryColors.primaryBlue,
+                                        shape: const RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.all(
+                                            Radius.circular(20),
                                           ),
-                                          fixedSize: Size(327, 56)),
-                                      onPressed: () {},
-                                      child: const Text(
-                                        "Proceed To checkout",
-                                        style: TextStyle(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.w600,
-                                            color: Colors.white),
-                                      )),
+                                        ),
+                                        fixedSize: Size(327, 56)),
+                                    onPressed: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) {
+                                            return CheckOutView();
+                                          },
+                                        ),
+                                      );
+                                    },
+                                    child: const Text(
+                                      "Proceed To checkout",
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w600,
+                                          color: Colors.white),
+                                    ),
+                                  ),
                                 )
                               ],
                             ),

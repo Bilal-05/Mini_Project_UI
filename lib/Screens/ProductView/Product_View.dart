@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mini_project/Constants/colors.dart';
 import 'package:mini_project/Functions/getfilteredList.dart';
-import 'package:mini_project/Screens/ProductView/ProductView_widgets/itemCard.dart';
-import 'package:mini_project/Screens/ProductView/ProductView_widgets/productAppBar.dart';
+import 'package:mini_project/Screens/productView/ProductView_widgets/itemCard.dart';
+import 'package:mini_project/Screens/productView/ProductView_widgets/productAppBar.dart';
 
 class ProductView extends StatefulWidget {
   final int pageNo;

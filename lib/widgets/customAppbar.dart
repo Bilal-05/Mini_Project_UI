@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:mini_project/Constants/colors.dart';
-import 'package:mini_project/widgets/cartBackButton.dart';
 
-class CartAppBar extends StatefulWidget {
-  const CartAppBar({super.key});
+import '../Constants/colors.dart';
+
+class CustomAppBar extends StatefulWidget {
+  final String screenName;
+  const CustomAppBar({super.key, required this.screenName});
 
   @override
-  State<CartAppBar> createState() => _CartAppBarState();
+  State<CustomAppBar> createState() => _CustomAppBarState();
 }
 
-class _CartAppBarState extends State<CartAppBar> {
+class _CustomAppBarState extends State<CustomAppBar> {
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -33,21 +33,12 @@ class _CartAppBarState extends State<CartAppBar> {
           child: const Center(child: BackButton()),
         ),
         const SizedBox(width: 20),
-        const Text(
-          'Shopping Cart',
-          style: TextStyle(
+        Text(
+          widget.screenName,
+          style: const TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w400,
               color: TextColors.textColor3),
-        ),
-        const Spacer(),
-        Container(
-          margin: const EdgeInsets.only(left: 10, right: 10),
-          child: const FaIcon(
-            FontAwesomeIcons.bagShopping,
-            color: TextColors.textColor3,
-            size: 25,
-          ),
         ),
       ],
     );

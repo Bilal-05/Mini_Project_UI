@@ -3,6 +3,7 @@ import 'package:mini_project/Functions/addToCart.dart';
 import 'package:mini_project/Screens/ProductDetailView/ProductDetail_view.dart';
 
 import '../../../Constants/colors.dart';
+import '../../../toast/customToast.dart';
 
 class ProductCard extends StatelessWidget {
   final Map TagList;
@@ -41,7 +42,7 @@ class ProductCard extends StatelessWidget {
                   Container(
                     child: Image.asset(
                       "${TagList['itemImage']}",
-                      height: 160,
+                      height: 140,
                       width: 130,
                     ),
                   ),
@@ -49,21 +50,20 @@ class ProductCard extends StatelessWidget {
                     heroTag: "${TagList['itemName']}$Index",
                     onPressed: () {
                       AddToCart.addToCart(TagList['itemName']);
+                      CustomToast.showToast('Item Added to Cart');
                     },
                     child: Icon(Icons.add),
                   ),
                 ],
               ),
             ),
-            Center(
-              child: Container(
-                margin: const EdgeInsets.only(top: 10),
-                height: 2,
-                width: 140,
-                decoration: BoxDecoration(
-                  color: SecondaryColors.secondaryGrey01,
-                  borderRadius: BorderRadius.circular(5),
-                ),
+            Container(
+              margin: const EdgeInsets.only(top: 2),
+              child: Divider(
+                indent: 10,
+                endIndent: 10,
+                thickness: 1,
+                color: SecondaryColors.secondaryGrey00.withOpacity(0.8),
               ),
             ),
             Container(
@@ -77,7 +77,7 @@ class ProductCard extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(left: 20, top: 5),
+              margin: EdgeInsets.only(left: 20, top: 2),
               child: Text(
                 "${TagList['itemName']}",
                 style: const TextStyle(

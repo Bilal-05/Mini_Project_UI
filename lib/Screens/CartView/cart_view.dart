@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:mini_project/Constants/colors.dart';
 import 'package:mini_project/Constants/imagePath.dart';
-import 'package:mini_project/Screens/CartView/CartView-Widget/cartview-appbar.dart';
-import 'package:mini_project/Screens/CartView/CartView-Widget/itemListing.dart';
+import 'package:mini_project/Screens/cartView/CartView-Widget/itemListing.dart';
+
+import '../../DataBases/InCart.dart';
+import '../../widgets/customAppbar.dart';
 
 class CartView extends StatefulWidget {
   const CartView({super.key});
@@ -12,6 +14,17 @@ class CartView extends StatefulWidget {
 }
 
 class _CartViewState extends State<CartView> {
+  int length = 0;
+
+  @override
+  void initState() {
+    setState(() {
+      length = Cart.inCart.length;
+    });
+    // TODO: implement initState
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +43,9 @@ class _CartViewState extends State<CartView> {
                   Container(
                     //AppBar
                     margin: const EdgeInsets.fromLTRB(15, 10, 10, 0),
-                    child: const CartAppBar(),
+                    child: const CustomAppBar(
+                      screenName: 'Shopping Cart',
+                    ),
                   ),
                 ],
               ),

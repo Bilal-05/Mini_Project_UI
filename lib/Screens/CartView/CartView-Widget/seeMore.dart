@@ -3,9 +3,10 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mini_project/Constants/colors.dart';
 import 'package:mini_project/DataBases/InCart.dart';
 import 'package:mini_project/Functions/getSubtotal.dart';
-import 'package:mini_project/Screens/CartView/CartView-Widget/cartview-appbar.dart';
 
 import '../../../DataBases/Product.dart';
+import '../../../widgets/customAppbar.dart';
+import '../../checkoutView/checkout_view.dart';
 
 class SeeMore extends StatefulWidget {
   const SeeMore({super.key});
@@ -31,10 +32,10 @@ class _SeeMoreState extends State<SeeMore> {
   @override
   void initState() {
     ViewCart = Cart.inCart;
-    for (int i = 0; i < Products.items.length; i++) {
-      for (int j = 0; j < Cart.inCart.length; j++) {
-        if (Products.items[i]['itemName'] == Cart.inCart[j]["itemName"]) {
-          OriginalPrice.add(Products.items[i]['itemUnit']);
+    for (int i = 0; i < Cart.inCart.length; i++) {
+      for (int j = 0; j < Products.items.length; j++) {
+        if (Cart.inCart[i]['itemName'] == Products.items[j]["itemName"]) {
+          OriginalPrice.add(Products.items[j]['itemUnit']);
         }
       }
     }
@@ -53,7 +54,9 @@ class _SeeMoreState extends State<SeeMore> {
               Container(
                 //AppBar
                 margin: const EdgeInsets.fromLTRB(15, 10, 10, 0),
-                child: const CartAppBar(),
+                child: CustomAppBar(
+                  screenName: 'Shopping Cart (${Cart.inCart.length})',
+                ),
               ),
               Container(
                 child: Column(
@@ -243,7 +246,16 @@ class _SeeMoreState extends State<SeeMore> {
                                                 ),
                                               ),
                                               fixedSize: Size(327, 56)),
-                                          onPressed: () {},
+                                          onPressed: () {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) {
+                                                  return CheckOutView();
+                                                },
+                                              ),
+                                            );
+                                          },
                                           child: const Text(
                                             "Proceed To checkout",
                                             style: TextStyle(

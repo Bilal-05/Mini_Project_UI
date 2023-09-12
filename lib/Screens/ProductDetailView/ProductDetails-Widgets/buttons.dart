@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:mini_project/Constants/colors.dart';
 import 'package:mini_project/Functions/addToCart.dart';
 
+import '../../../toast/customToast.dart';
+
 class RoundButton extends StatefulWidget {
   final String itemName;
   const RoundButton({super.key, required this.itemName});
@@ -29,6 +31,7 @@ class _RoundButtonState extends State<RoundButton> {
           ),
           onPressed: () {
             AddToCart.addToCart(widget.itemName);
+            CustomToast.showToast('Item Added to Cart');
           },
           child: const Text(
             "Add To Cart",
@@ -53,7 +56,9 @@ class _RoundButtonState extends State<RoundButton> {
               ),
             ),
           ),
-          onPressed: () {},
+          onPressed: () {
+            CustomToast.showToast('Try Again Later');
+          },
           child: const Text(
             "Buy Now",
             style: TextStyle(

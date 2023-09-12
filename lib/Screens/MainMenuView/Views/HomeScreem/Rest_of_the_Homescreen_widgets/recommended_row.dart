@@ -5,6 +5,8 @@ import 'package:mini_project/Functions/addToCart.dart';
 import 'package:mini_project/Functions/getList.dart';
 import 'package:mini_project/Screens/ProductDetailView/ProductDetail_view.dart';
 
+import '../../../../../toast/customToast.dart';
+
 class Recommended extends StatefulWidget {
   final List cart;
   const Recommended({
@@ -187,6 +189,8 @@ class _RecommendedState extends State<Recommended> {
                                       onPressed: () {
                                         AddToCart.addToCart(
                                             RecommendedDeal[index]['itemName']);
+                                        CustomToast.showToast(
+                                            'Item Added to Cart');
                                       },
                                       child: const FaIcon(
                                         FontAwesomeIcons.plus,

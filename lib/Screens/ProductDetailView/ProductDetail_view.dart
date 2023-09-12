@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:mini_project/Functions/getItemMap.dart';
-import 'package:mini_project/Screens/ProductDetailView/ProductDetails-Widgets/Appbar_ProductDetails.dart';
-import 'package:mini_project/Screens/ProductDetailView/ProductDetails-Widgets/Details.dart';
-import 'package:mini_project/Screens/ProductDetailView/ProductDetails-Widgets/NutritionalFact.dart';
-import 'package:mini_project/Screens/ProductDetailView/ProductDetails-Widgets/Reviews.dart';
-import 'package:mini_project/Screens/ProductDetailView/ProductDetails-Widgets/buttons.dart';
-import 'package:mini_project/Screens/ProductDetailView/ProductDetails-Widgets/pricingRow.dart';
-import 'package:mini_project/Screens/ProductDetailView/ProductDetails-Widgets/ratingRow.dart';
+import 'package:mini_project/Screens/productdetailView/ProductDetails-Widgets/Appbar_ProductDetails.dart';
+import 'package:mini_project/Screens/productdetailView/ProductDetails-Widgets/Details.dart';
+import 'package:mini_project/Screens/productdetailView/ProductDetails-Widgets/NutritionalFact.dart';
+import 'package:mini_project/Screens/productdetailView/ProductDetails-Widgets/Reviews.dart';
+import 'package:mini_project/Screens/productdetailView/ProductDetails-Widgets/buttons.dart';
+import 'package:mini_project/Screens/productdetailView/ProductDetails-Widgets/pricingRow.dart';
+import 'package:mini_project/Screens/productdetailView/ProductDetails-Widgets/ratingRow.dart';
 
 import '../../Constants/colors.dart';
 import '../../DataBases/FavoriteItem.dart';
 import '../../DataBases/Product.dart';
+import '../../toast/customToast.dart';
 
 class ProductDetailView extends StatefulWidget {
   final String itemName;
@@ -85,6 +86,9 @@ class _ProductDetailViewState extends State<ProductDetailView> {
                                 print(Favorite.Fav);
                               }
                             }
+
+                            CustomToast.showToast(
+                                'Item removed from favorites');
                           } else {
                             for (int i = 0; i < Products.items.length; i++) {
                               if (ItemDetails[0]['itemName'] ==
@@ -99,6 +103,8 @@ class _ProductDetailViewState extends State<ProductDetailView> {
                             item['itemFav'] = ItemDetails[0]['isFav'];
                             Favorite.Fav.add(item);
                             print(Favorite.Fav);
+
+                            CustomToast.showToast('Item added to favorites');
                           }
                         },
                       );

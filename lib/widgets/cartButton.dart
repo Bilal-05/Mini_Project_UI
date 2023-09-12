@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mini_project/Functions/getItemNumber.dart';
-import 'package:mini_project/Screens/CartView/cart_view.dart';
+import 'package:mini_project/Screens/cartView/cart_view.dart';
 import 'package:page_transition/page_transition.dart';
 
 import '../Constants/colors.dart';
