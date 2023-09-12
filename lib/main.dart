@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mini_project/Screens/onboardingView/onboarding_view.dart';
+// import 'package:mini_project/Screens/onboardingView/onboarding_view.dart';
+import 'package:mini_project/Screens/splashScreen/splashScreen.dart';
 
 import 'Screens/MainMenuView/mainMenu_view.dart';
 // import 'Screens/MainMenuView/widget/HomeScreem/HomeScreen.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => const OnBoardingView(),
+        '/': (context) => const SplashScreen(),
         '/firstscreen': (context) => const MainMenuView(),
       },
     );

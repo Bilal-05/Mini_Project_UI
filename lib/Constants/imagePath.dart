@@ -41,4 +41,5 @@ class ProductImages {
   static String track = 'assets/images/Track.png';
   static String map = 'assets/images/Map.png';
   static String Rider = 'assets/images/Rider.png';
+  static String GoFresh = 'assets/images/goFresh.jpg';
 }
