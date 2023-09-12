@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:mini_project/Constants/imagePath.dart';
+import 'package:mini_project/DataBases/orders.dart';
 import 'package:mini_project/Screens/trackView.dart/trackView.dart';
 
 import '../../Constants/colors.dart';
@@ -17,6 +18,15 @@ class OrderView extends StatefulWidget {
 
 class _OrderViewState extends State<OrderView> {
   var randomNumber = Random().nextInt(10000);
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    Orders.Order = Cart.inCart;
+    print(Orders.Order);
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +44,7 @@ class _OrderViewState extends State<OrderView> {
             Container(
               child: Expanded(
                 child: ListView.builder(
-                  itemCount: Cart.inCart.length,
+                  itemCount: Orders.Order.length,
                   itemBuilder: (context, index) {
                     return Container(
                       margin: EdgeInsets.all(10),
@@ -49,11 +59,11 @@ class _OrderViewState extends State<OrderView> {
                           height: 45,
                           width: 45,
                           child: Image.asset(
-                            Cart.inCart[index]['itemImage'],
+                            Orders.Order[index]['itemImage'],
                           ),
                         ),
                         title: Text(
-                          Cart.inCart[index]['itemName'],
+                          Orders.Order[index]['itemName'],
                           style: const TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.w500,
@@ -62,7 +72,7 @@ class _OrderViewState extends State<OrderView> {
                         subtitle: Padding(
                           padding: const EdgeInsets.only(top: 5),
                           child: Text(
-                            "\$ ${Cart.inCart[index]['itemUnit']}",
+                            "\$ ${Orders.Order[index]['itemUnit']}",
                             style: const TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w700,
@@ -94,7 +104,7 @@ class _OrderViewState extends State<OrderView> {
                               ),
                             ),
                             Text(
-                              "Quantity ${Cart.inCart[index]['Quantity']}",
+                              "Quantity ${Orders.Order[index]['Quantity']}",
                               style: const TextStyle(
                                   fontSize: 14,
                                   fontWeight: FontWeight.w700,

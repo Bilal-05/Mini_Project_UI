@@ -5,6 +5,7 @@ import 'package:mini_project/Constants/imagePath.dart';
 import 'package:mini_project/DataBases/address.dart';
 import 'package:mini_project/toast/customToast.dart';
 
+import '../../DataBases/InCart.dart';
 import '../../widgets/customAppbar.dart';
 
 class TrackView extends StatefulWidget {
@@ -34,7 +35,7 @@ class _TrackViewState extends State<TrackView> {
               alignment: AlignmentDirectional.bottomCenter,
               children: [
                 Container(
-                  margin: EdgeInsets.symmetric(vertical: 20),
+                  margin: EdgeInsets.only(top: 20),
                   child: Image.asset(ProductImages.map),
                 ),
                 Container(
@@ -120,7 +121,7 @@ class _TrackViewState extends State<TrackView> {
               ],
             ),
             Container(
-              margin: EdgeInsets.only(left: 20, top: 20),
+              margin: EdgeInsets.only(left: 20, top: 10),
               child: const ListTile(
                 leading: FaIcon(FontAwesomeIcons.clock),
                 title: Text(
@@ -172,7 +173,7 @@ class _TrackViewState extends State<TrackView> {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(left: 20, top: 10, bottom: 15),
+              margin: EdgeInsets.only(left: 20, top: 10, bottom: 0),
               child: ListTile(
                 leading: const Icon(Icons.shopping_bag),
                 title: RichText(
@@ -198,6 +199,32 @@ class _TrackViewState extends State<TrackView> {
                 ),
               ),
             ),
+            Container(
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: PrimaryColors.primaryBlue,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    fixedSize: const Size(200, 50)),
+                onPressed: () {
+                  setState(() {
+                    Cart.inCart = [];
+                  });
+                  Navigator.popUntil(
+                    context,
+                    ModalRoute.withName('/firstscreen'),
+                  );
+                },
+                child: const Text(
+                  'Go To MainMenu',
+                  style: TextStyle(
+                      color: TextColors.textColor1,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600),
+                ),
+              ),
+            )
           ],
         ),
       ),
