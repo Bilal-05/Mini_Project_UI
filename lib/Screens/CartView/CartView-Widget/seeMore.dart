@@ -31,7 +31,6 @@ class _SeeMoreState extends State<SeeMore> {
   String text = 'Cart is Empty';
   @override
   void initState() {
-    ViewCart = Cart.inCart;
     for (int i = 0; i < Cart.inCart.length; i++) {
       for (int j = 0; j < Products.items.length; j++) {
         if (Cart.inCart[i]['itemName'] == Products.items[j]["itemName"]) {
@@ -39,6 +38,7 @@ class _SeeMoreState extends State<SeeMore> {
         }
       }
     }
+    print(OriginalPrice);
     subTotal = SubTotal.getSubTotal();
     // TODO: implement initState
     super.initState();
@@ -114,12 +114,15 @@ class _SeeMoreState extends State<SeeMore> {
                                           Cart.inCart[index]['itemUnit'] =
                                               Cart.inCart[index]['itemUnit'] -
                                                   OriginalPrice[index];
-                                          subTotal = SubTotal.getSubTotal();
+
                                           if (Cart.inCart[index]['Quantity'] ==
                                               0) {
+                                            OriginalPrice.removeAt(index);
+                                            print(OriginalPrice);
                                             Cart.inCart.removeAt(index);
                                             text = 'Cart is Empty';
                                           }
+                                          subTotal = SubTotal.getSubTotal();
                                           if (Cart.inCart.length == 3) {
                                             Navigator.pop(context);
                                           }

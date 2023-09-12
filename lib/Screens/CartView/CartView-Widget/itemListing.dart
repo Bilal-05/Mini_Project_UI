@@ -30,8 +30,9 @@ class _CustomListTileState extends State<CustomListTile> {
   List OriginalPrice = [];
   int subTotal = 0;
   String text = 'Cart is Empty';
-  @override
-  void initState() {
+
+  void getOriginalPrice() {
+    OriginalPrice = [];
     for (int i = 0; i < Cart.inCart.length; i++) {
       for (int j = 0; j < Products.items.length; j++) {
         if (Cart.inCart[i]['itemName'] == Products.items[j]["itemName"]) {
@@ -39,6 +40,11 @@ class _CustomListTileState extends State<CustomListTile> {
         }
       }
     }
+  }
+
+  @override
+  void initState() {
+    getOriginalPrice();
     print(OriginalPrice);
     subTotal = SubTotal.getSubTotal();
 
@@ -124,13 +130,16 @@ class _CustomListTileState extends State<CustomListTile> {
                                                 Cart.inCart[index]['itemUnit'] -
                                                     OriginalPrice[index];
 
-                                            subTotal = SubTotal.getSubTotal();
                                             if (Cart.inCart[index]
                                                     ['Quantity'] ==
                                                 0) {
+                                              OriginalPrice.removeAt(index);
+                                              print(OriginalPrice);
                                               Cart.inCart.removeAt(index);
                                               text = 'Cart is Empty';
                                             }
+
+                                            subTotal = SubTotal.getSubTotal();
                                           });
                                         },
                                         child: FaIcon(FontAwesomeIcons.minus),
@@ -193,6 +202,9 @@ class _CustomListTileState extends State<CustomListTile> {
                             ),
                           );
                           setState(() {
+                            print(OriginalPrice);
+                            getOriginalPrice();
+                            print(OriginalPrice);
                             subTotal = SubTotal.getSubTotal();
                           });
                           setState(() {});
