@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:mini_project/Constants/colors.dart';
 import 'package:mini_project/Functions/getSubtotal.dart';
 import 'package:mini_project/Screens/ordersView/orders_View.dart';
@@ -32,6 +33,7 @@ class _AddCardState extends State<AddCard> {
   late String card_Holder = '';
   TextEditingController cardNumber = TextEditingController();
   late String card_Number = '';
+
   TextEditingController cardExp = TextEditingController();
   late String card_Exp = '';
   TextEditingController cardCVV = TextEditingController();
@@ -115,9 +117,13 @@ class _AddCardState extends State<AddCard> {
             Container(
               margin: const EdgeInsets.fromLTRB(15, 10, 10, 0),
               child: TextField(
-                maxLength: 20,
                 keyboardType: TextInputType.number,
                 focusNode: Number,
+                inputFormatters: [
+                  FilteringTextInputFormatter.digitsOnly,
+                  LengthLimitingTextInputFormatter(16),
+                  CardNumberInputFormatter()
+                ],
                 style: const TextStyle(color: TextColors.textColor3),
                 decoration: InputDecoration(
                   contentPadding:
@@ -133,7 +139,7 @@ class _AddCardState extends State<AddCard> {
                   ),
                   hintStyle:
                       TextStyle(color: TextColors.textColor4.withOpacity(0.4)),
-                  hintText: 'eg. 0987 0986 5543 09809',
+                  hintText: 'eg. 0987 0986 5543 0980',
                   filled: true,
                   fillColor: TextColors.textColor1,
                   enabledBorder: OutlineInputBorder(
@@ -170,7 +176,11 @@ class _AddCardState extends State<AddCard> {
                           Container(
                             margin: const EdgeInsets.fromLTRB(0, 15, 0, 0),
                             child: TextField(
-                              maxLength: 5,
+                              inputFormatters: [
+                                FilteringTextInputFormatter.digitsOnly,
+                                LengthLimitingTextInputFormatter(4),
+                                DateInputFormatter()
+                              ],
                               keyboardType: TextInputType.datetime,
                               focusNode: Exp,
                               style:
@@ -384,6 +394,60 @@ class _AddCardState extends State<AddCard> {
           ],
         ),
       ),
+    );
+  }
+}
+
+class CardNumberInputFormatter extends TextInputFormatter {
+  @override
+  TextEditingValue formatEditUpdate(
+      TextEditingValue oldValue, TextEditingValue newValue) {
+    // TODO: implement formatEditUpdate
+    if (newValue.selection.baseOffset == 0) {
+      return newValue;
+    }
+
+    String enteredData = newValue.text;
+    StringBuffer buffer = StringBuffer();
+
+    for (int i = 0; i < enteredData.length; i++) {
+      buffer.write(enteredData[i]);
+      int index = i + 1;
+      if (index % 4 == 0 && enteredData.length != index) {
+        buffer.write(" ");
+      }
+    }
+
+    return TextEditingValue(
+      text: buffer.toString(),
+      selection: TextSelection.collapsed(offset: buffer.toString().length),
+    );
+  }
+}
+
+class DateInputFormatter extends TextInputFormatter {
+  @override
+  TextEditingValue formatEditUpdate(
+      TextEditingValue oldValue, TextEditingValue newValue) {
+    // TODO: implement formatEditUpdate
+    if (newValue.selection.baseOffset == 0) {
+      return newValue;
+    }
+
+    String enteredData = newValue.text;
+    StringBuffer buffer = StringBuffer();
+
+    for (int i = 0; i < enteredData.length; i++) {
+      buffer.write(enteredData[i]);
+      int index = i + 1;
+      if (index % 2 == 0 && enteredData.length != index) {
+        buffer.write("/");
+      }
+    }
+
+    return TextEditingValue(
+      text: buffer.toString(),
+      selection: TextSelection.collapsed(offset: buffer.toString().length),
     );
   }
 }

@@ -39,4 +39,6 @@ class ProductImages {
   static String heartSelected = 'assets/navbar/HeartSelected.svg';
   static String heartUnselected = 'assets/navbar/HeartUnselected.svg';
   static String track = 'assets/images/Track.png';
+  static String map = 'assets/images/Map.png';
+  static String Rider = 'assets/images/Rider.png';
 }

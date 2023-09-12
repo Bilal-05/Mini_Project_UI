@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:mini_project/Constants/imagePath.dart';
+import 'package:mini_project/Screens/trackView.dart/trackView.dart';
 
 import '../../Constants/colors.dart';
 import '../../DataBases/InCart.dart';
@@ -152,25 +153,37 @@ class _OrderViewState extends State<OrderView> {
                               fontWeight: FontWeight.w600,
                               color: TextColors.textColor3),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                              backgroundColor: PrimaryColors.primaryBlue,
-                              fixedSize: const Size(115, 56),
+                          style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20),
                             ),
-                            onPressed: () {},
-                            child: const Text(
-                              'Track Order',
-                              style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w600,
-                                  color: TextColors.textColor1),
-                            ))
+                            backgroundColor: PrimaryColors.primaryBlue,
+                            fixedSize: const Size(115, 56),
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return TrackView(
+                                    orderNumber: randomNumber,
+                                  );
+                                },
+                              ),
+                            );
+                          },
+                          child: const Text(
+                            'Track Order',
+                            style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                color: TextColors.textColor1),
+                          ),
+                        ),
                       ],
                     ),
                   ),
