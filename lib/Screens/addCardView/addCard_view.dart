@@ -37,6 +37,11 @@ class _AddCardState extends State<AddCard> {
   TextEditingController cardCVV = TextEditingController();
   late String card_CVV = '';
 
+  FocusNode Holder = FocusNode();
+  FocusNode Number = FocusNode();
+  FocusNode Exp = FocusNode();
+  FocusNode CVV = FocusNode();
+
   @override
   void initState() {
     subTotal = SubTotal.getSubTotal();
@@ -68,7 +73,7 @@ class _AddCardState extends State<AddCard> {
             Container(
               margin: const EdgeInsets.fromLTRB(15, 10, 10, 0),
               child: TextField(
-                // focusNode: addressName1,
+                focusNode: Holder,
                 style: const TextStyle(color: TextColors.textColor3),
                 decoration: InputDecoration(
                   contentPadding:
@@ -96,7 +101,7 @@ class _AddCardState extends State<AddCard> {
                 controller: cardHolder,
                 onSubmitted: (String value) {
                   card_Holder = cardHolder.text;
-                  // FocusScope.of(context).requestFocus(address2);
+                  FocusScope.of(context).requestFocus(Number);
                 },
               ),
             ),
@@ -112,7 +117,7 @@ class _AddCardState extends State<AddCard> {
               child: TextField(
                 maxLength: 20,
                 keyboardType: TextInputType.number,
-                // focusNode: addressName1,
+                focusNode: Number,
                 style: const TextStyle(color: TextColors.textColor3),
                 decoration: InputDecoration(
                   contentPadding:
@@ -140,7 +145,7 @@ class _AddCardState extends State<AddCard> {
                 controller: cardNumber,
                 onSubmitted: (String value) {
                   card_Number = cardNumber.text;
-                  // FocusScope.of(context).requestFocus(address2);
+                  FocusScope.of(context).requestFocus(Exp);
                 },
               ),
             ),
@@ -167,7 +172,7 @@ class _AddCardState extends State<AddCard> {
                             child: TextField(
                               maxLength: 5,
                               keyboardType: TextInputType.datetime,
-                              // focusNode: addressName1,
+                              focusNode: Exp,
                               style:
                                   const TextStyle(color: TextColors.textColor3),
                               decoration: InputDecoration(
@@ -197,7 +202,7 @@ class _AddCardState extends State<AddCard> {
                               controller: cardExp,
                               onSubmitted: (String value) {
                                 card_Exp = cardExp.text;
-                                // FocusScope.of(context).requestFocus(address2);
+                                FocusScope.of(context).requestFocus(CVV);
                               },
                             ),
                           ),
@@ -225,7 +230,7 @@ class _AddCardState extends State<AddCard> {
                             child: TextField(
                               maxLength: 4,
                               keyboardType: TextInputType.number,
-                              // focusNode: addressName1,
+                              focusNode: CVV,
                               style:
                                   const TextStyle(color: TextColors.textColor3),
                               decoration: InputDecoration(
@@ -255,7 +260,6 @@ class _AddCardState extends State<AddCard> {
                               controller: cardCVV,
                               onSubmitted: (String value) {
                                 card_CVV = cardCVV.text;
-                                // FocusScope.of(context).requestFocus(address2);
                               },
                             ),
                           ),
