@@ -205,7 +205,7 @@ class _AddCardState extends State<AddCard> {
                     // optional flex property if flex is 1 because the default flex is 1
                     flex: 1,
                     child: Container(
-                      margin: const EdgeInsets.fromLTRB(15, 15, 0, 0),
+                      margin: const EdgeInsets.fromLTRB(15, 0, 0, 0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
