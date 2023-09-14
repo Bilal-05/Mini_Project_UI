@@ -17,7 +17,7 @@ class Products extends StatelessWidget {
             crossAxisCount: 2,
             mainAxisSpacing: 10,
             crossAxisSpacing: 2,
-            childAspectRatio: 0.75),
+            childAspectRatio: 0.70),
         itemBuilder: ((context, index) {
           return InkWell(
             onTap: () {

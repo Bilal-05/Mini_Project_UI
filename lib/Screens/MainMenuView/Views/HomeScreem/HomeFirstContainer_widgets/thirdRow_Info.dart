@@ -99,7 +99,7 @@ class _ThirdRowState extends State<ThirdRow> {
                   },
                   buttonStyleData: const ButtonStyleData(
                     height: 38,
-                    width: 85,
+                    width: 95,
                   ),
                   dropdownStyleData: const DropdownStyleData(
                     decoration: BoxDecoration(color: PrimaryColors.primaryBlue),

@@ -349,7 +349,7 @@ class _ProductViewState extends State<ProductView>
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 2,
-                            childAspectRatio: 0.75,
+                            childAspectRatio: 0.73,
                             mainAxisSpacing: 2),
                     itemBuilder: (context, index) {
                       return Container(

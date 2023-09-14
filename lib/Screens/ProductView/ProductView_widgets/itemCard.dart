@@ -67,7 +67,7 @@ class ProductCard extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(left: 20, top: 5),
+              margin: EdgeInsets.only(left: 20, top: 10),
               child: Text(
                 "\$${TagList['itemUnit']}",
                 style: const TextStyle(
@@ -77,7 +77,7 @@ class ProductCard extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(left: 20, top: 2),
+              margin: EdgeInsets.only(left: 20, top: 4),
               child: Text(
                 "${TagList['itemName']}",
                 style: const TextStyle(
