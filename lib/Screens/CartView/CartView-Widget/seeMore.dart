@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mini_project/Constants/colors.dart';
 import 'package:mini_project/DataBases/InCart.dart';
 import 'package:mini_project/Functions/getSubtotal.dart';
+import 'package:page_transition/page_transition.dart';
 
 import '../../../DataBases/Product.dart';
 import '../../../widgets/customAppbar.dart';
@@ -252,10 +253,11 @@ class _SeeMoreState extends State<SeeMore> {
                                           onPressed: () {
                                             Navigator.push(
                                               context,
-                                              MaterialPageRoute(
-                                                builder: (context) {
-                                                  return CheckOutView();
-                                                },
+                                              PageTransition(
+                                                curve: Curves.linear,
+                                                type: PageTransitionType
+                                                    .rightToLeft,
+                                                child: const CheckOutView(),
                                               ),
                                             );
                                           },

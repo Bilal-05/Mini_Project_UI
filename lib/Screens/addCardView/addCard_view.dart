@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:mini_project/Constants/colors.dart';
+import 'package:mini_project/Constants/imagePath.dart';
 import 'package:mini_project/Functions/getSubtotal.dart';
 import 'package:mini_project/Screens/ordersView/orders_View.dart';
 import 'package:mini_project/toast/customToast.dart';
+import 'package:page_transition/page_transition.dart';
 
 import '../../widgets/customAppbar.dart';
 
@@ -39,6 +42,8 @@ class _AddCardState extends State<AddCard> {
   TextEditingController cardCVV = TextEditingController();
   late String card_CVV = '';
 
+  String card = '';
+  bool cardExist = false;
   FocusNode Holder = FocusNode();
   FocusNode Number = FocusNode();
   FocusNode Exp = FocusNode();
@@ -72,6 +77,7 @@ class _AddCardState extends State<AddCard> {
                 style: TextFieldStyle,
               ),
             ),
+            // Name TextField
             Container(
               margin: const EdgeInsets.fromLTRB(15, 10, 10, 0),
               child: TextField(
@@ -114,6 +120,7 @@ class _AddCardState extends State<AddCard> {
                 style: TextFieldStyle,
               ),
             ),
+            // CardNumber TextField
             Container(
               margin: const EdgeInsets.fromLTRB(15, 10, 10, 0),
               child: TextField(
@@ -126,11 +133,20 @@ class _AddCardState extends State<AddCard> {
                 ],
                 style: const TextStyle(color: TextColors.textColor3),
                 decoration: InputDecoration(
+                  prefixIcon: cardNumber.text == ''
+                      ? null
+                      : Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: SvgPicture.asset(card),
+                        ),
                   contentPadding:
                       const EdgeInsets.symmetric(vertical: 23, horizontal: 10),
                   suffixIcon: IconButton(
                     onPressed: () {
-                      cardNumber.clear();
+                      setState(() {
+                        card = '';
+                        cardNumber.clear();
+                      });
                     },
                     icon: const Icon(
                       Icons.cancel_outlined,
@@ -153,12 +169,38 @@ class _AddCardState extends State<AddCard> {
                   card_Number = cardNumber.text;
                   FocusScope.of(context).requestFocus(Exp);
                 },
+                onChanged: (String value) {
+                  setState(() {
+                    if (cardNumber.text == '') {
+                    } else {
+                      for (int i = 0; i < cardNumber.text.length;) {
+                        if (cardNumber.text[i] == '2' ||
+                            cardNumber.text[i] == '5') {
+                          card = ProductImages.Mastercard;
+                          for (int i = 0; i < cardNumber.text.length; i++) {}
+                          cardExist = true;
+                          break;
+                        } else if (cardNumber.text[i] == '4') {
+                          card = ProductImages.Visa;
+                          cardExist = true;
+                          break;
+                        } else {
+                          card = ProductImages.wrongCard;
+                          cardExist = false;
+                          break;
+                        }
+                      }
+                    }
+                  });
+                },
               ),
             ),
+
             Container(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
+                  // EXPDATE TextField
                   Expanded(
                     // optional flex property if flex is 1 because the default flex is 1
                     flex: 1,
@@ -221,6 +263,7 @@ class _AddCardState extends State<AddCard> {
                     ),
                   ),
                   const SizedBox(width: 20.0),
+                  // CVV TextField
                   Expanded(
                     // optional flex property if flex is 1 because the default flex is 1
                     flex: 1,
@@ -365,13 +408,16 @@ class _AddCardState extends State<AddCard> {
                                   cardCVV.text == '') {
                                 CustomToast.showToast(
                                     'Fill the above textfields');
+                              } else if (cardExist == false) {
+                                CustomToast.showToast(
+                                    'Please Enter correct card number');
                               } else {
                                 Navigator.push(
                                   context,
-                                  MaterialPageRoute(
-                                    builder: (context) {
-                                      return OrderView();
-                                    },
+                                  PageTransition(
+                                    curve: Curves.linear,
+                                    type: PageTransitionType.rightToLeft,
+                                    child: const OrderView(),
                                   ),
                                 );
                               }

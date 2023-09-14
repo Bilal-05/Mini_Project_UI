@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:mini_project/Constants/imagePath.dart';
 import 'package:mini_project/DataBases/orders.dart';
 import 'package:mini_project/Screens/trackView.dart/trackView.dart';
+import 'package:page_transition/page_transition.dart';
 
 import '../../Constants/colors.dart';
 import '../../DataBases/InCart.dart';
@@ -30,6 +31,7 @@ class _OrderViewState extends State<OrderView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: SecondaryColors.secondaryWhite20,
       body: SafeArea(
         child: Column(
           children: [
@@ -177,12 +179,12 @@ class _OrderViewState extends State<OrderView> {
                           onPressed: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(
-                                builder: (context) {
-                                  return TrackView(
-                                    orderNumber: randomNumber,
-                                  );
-                                },
+                              PageTransition(
+                                curve: Curves.linear,
+                                type: PageTransitionType.rightToLeft,
+                                child: TrackView(
+                                  orderNumber: randomNumber,
+                                ),
                               ),
                             );
                           },

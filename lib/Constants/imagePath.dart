@@ -42,4 +42,8 @@ class ProductImages {
   static String map = 'assets/images/Map.png';
   static String Rider = 'assets/images/Rider.png';
   static String GoFresh = 'assets/images/goFresh.jpg';
+  static String Mastercard = 'assets/navbar/mastercard.svg';
+  static String Visa = 'assets/navbar/visa.svg';
+  static String American = 'assets/navbar/american.svg';
+  static String wrongCard = 'assets/navbar/card-remove.svg';
 }

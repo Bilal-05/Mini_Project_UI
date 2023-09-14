@@ -21,7 +21,13 @@ class _MainMenuViewState extends State<MainMenuView> {
   var currentPage = 0;
   final _controller = NotchBottomBarController(index: 0);
   final _pageController = PageController(initialPage: 0);
-  List Page = const [HomeView(), CategoryView(), FavoriteView(), MoreView()];
+  List Page = const [
+    HomeView(),
+    CategoryView(),
+    FavoriteView(),
+    MoreView(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

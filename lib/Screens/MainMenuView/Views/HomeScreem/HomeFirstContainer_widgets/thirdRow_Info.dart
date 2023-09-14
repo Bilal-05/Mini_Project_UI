@@ -51,7 +51,7 @@ class _ThirdRowState extends State<ThirdRow> {
           ),
         ),
         const Spacer(),
-        SizedBox(
+        Container(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,

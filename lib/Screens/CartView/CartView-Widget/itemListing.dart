@@ -5,6 +5,7 @@ import 'package:mini_project/DataBases/InCart.dart';
 import 'package:mini_project/Functions/getSubtotal.dart';
 import 'package:mini_project/Screens/cartView/CartView-Widget/seeMore.dart';
 import 'package:mini_project/Screens/checkoutView/checkout_view.dart';
+import 'package:page_transition/page_transition.dart';
 
 import '../../../DataBases/Product.dart';
 
@@ -306,10 +307,10 @@ class _CustomListTileState extends State<CustomListTile> {
                                     onPressed: () {
                                       Navigator.push(
                                         context,
-                                        MaterialPageRoute(
-                                          builder: (context) {
-                                            return CheckOutView();
-                                          },
+                                        PageTransition(
+                                          curve: Curves.linear,
+                                          type: PageTransitionType.rightToLeft,
+                                          child: const CheckOutView(),
                                         ),
                                       );
                                     },

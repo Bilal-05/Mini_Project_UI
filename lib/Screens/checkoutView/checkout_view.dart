@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mini_project/Constants/colors.dart';
 import 'package:mini_project/Screens/addCardView/addCard_view.dart';
 import 'package:mini_project/toast/customToast.dart';
+import 'package:page_transition/page_transition.dart';
 
 import '../../DataBases/InCart.dart';
 import '../../DataBases/address.dart';
@@ -175,6 +176,7 @@ class _CheckOutViewState extends State<CheckOutView> {
                   setState(() {});
                   await showModalBottomSheet(
                     backgroundColor: PrimaryColors.primaryBlue,
+                    useSafeArea: true,
                     isScrollControlled: true,
                     context: context,
                     builder: (context) {
@@ -308,7 +310,7 @@ class _CheckOutViewState extends State<CheckOutView> {
                                             addAddress['addressDetails'] =
                                                 address_detail;
                                             addAddress['addressSelected'] =
-                                                false;
+                                                true;
                                             Address.addressList.add(addAddress);
                                             addAddress = {};
                                             Navigator.pop(context);
@@ -384,12 +386,13 @@ class _CheckOutViewState extends State<CheckOutView> {
                           if (Count == 0) {
                             CustomToast.showToast('Select an Address');
                           } else if (Count == 1) {
+                            print(Address.addressList);
                             Navigator.push(
                               context,
-                              MaterialPageRoute(
-                                builder: (context) {
-                                  return AddCard();
-                                },
+                              PageTransition(
+                                curve: Curves.linear,
+                                type: PageTransitionType.rightToLeft,
+                                child: const AddCard(),
                               ),
                             );
                           } else {

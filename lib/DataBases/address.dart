@@ -1,3 +1,9 @@
 class Address {
-  static List addressList = [];
+  static List addressList = [
+    {
+      'addressName': 'Home',
+      'addressDetails': 'Azizabad',
+      'addressSelected': true,
+    }
+  ];
 }
