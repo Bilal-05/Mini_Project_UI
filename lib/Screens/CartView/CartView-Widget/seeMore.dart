@@ -65,7 +65,7 @@ class _SeeMoreState extends State<SeeMore> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
-                      height: 500,
+                      height: 480,
                       child: ListView.builder(
                         itemCount: Cart.inCart.length,
                         itemBuilder: (context, index) {
@@ -192,7 +192,7 @@ class _SeeMoreState extends State<SeeMore> {
                                 ],
                               ),
                               margin: const EdgeInsets.only(top: 10, bottom: 5),
-                              height: MediaQuery.of(context).size.height * 0.30,
+                              height: MediaQuery.of(context).size.height * 0.28,
                               width: 359,
                               child: Container(
                                 margin: const EdgeInsets.only(top: 20),

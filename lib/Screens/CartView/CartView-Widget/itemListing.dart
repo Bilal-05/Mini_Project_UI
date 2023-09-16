@@ -248,8 +248,8 @@ class _CustomListTileState extends State<CustomListTile> {
                               ),
                             ],
                           ),
-                          margin: const EdgeInsets.only(top: 10, bottom: 5),
-                          height: MediaQuery.of(context).size.height * 0.30,
+                          margin: const EdgeInsets.only(top: 20, bottom: 5),
+                          height: MediaQuery.of(context).size.height * 0.28,
                           width: 359,
                           child: Container(
                             margin: const EdgeInsets.only(top: 20),

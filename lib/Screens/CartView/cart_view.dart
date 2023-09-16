@@ -37,6 +37,7 @@ class _CartViewState extends State<CartView> {
                 children: [
                   Container(
                     // 25% Image
+                    height: MediaQuery.of(context).size.height * 0.30,
                     color: PrimaryColors.primaryYellow,
                     child: Center(child: Image.asset(ProductImages.Sale)),
                   ),

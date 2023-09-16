@@ -18,6 +18,33 @@ class AddCard extends StatefulWidget {
 }
 
 class _AddCardState extends State<AddCard> {
+  void CheckCard() {
+    if (cardNumber.text == '') {
+      cardExist = false;
+    } else {
+      for (int i = 0; i < cardNumber.text.length;) {
+        if (cardNumber.text[i] == '2' || cardNumber.text[i] == '5') {
+          card = ProductImages.Mastercard;
+          for (int i = 0; i < cardNumber.text.length; i++) {}
+          cardExist = true;
+          break;
+        } else if (cardNumber.text[i] == '4') {
+          card = ProductImages.Visa;
+          cardExist = true;
+          break;
+        } else if (cardNumber.text[i] == '3') {
+          card = ProductImages.American;
+          cardExist = true;
+          break;
+        } else {
+          card = ProductImages.wrongCard;
+          cardExist = false;
+          break;
+        }
+      }
+    }
+  }
+
   TextStyle Pricing = const TextStyle(
       fontSize: 14, fontWeight: FontWeight.w500, color: TextColors.textColor3);
 
@@ -170,28 +197,11 @@ class _AddCardState extends State<AddCard> {
                   FocusScope.of(context).requestFocus(Exp);
                 },
                 onChanged: (String value) {
-                  setState(() {
-                    if (cardNumber.text == '') {
-                    } else {
-                      for (int i = 0; i < cardNumber.text.length;) {
-                        if (cardNumber.text[i] == '2' ||
-                            cardNumber.text[i] == '5') {
-                          card = ProductImages.Mastercard;
-                          for (int i = 0; i < cardNumber.text.length; i++) {}
-                          cardExist = true;
-                          break;
-                        } else if (cardNumber.text[i] == '4') {
-                          card = ProductImages.Visa;
-                          cardExist = true;
-                          break;
-                        } else {
-                          card = ProductImages.wrongCard;
-                          cardExist = false;
-                          break;
-                        }
-                      }
-                    }
-                  });
+                  setState(
+                    () {
+                      CheckCard();
+                    },
+                  );
                 },
               ),
             ),
@@ -205,7 +215,7 @@ class _AddCardState extends State<AddCard> {
                     // optional flex property if flex is 1 because the default flex is 1
                     flex: 1,
                     child: Container(
-                      margin: const EdgeInsets.fromLTRB(15, 0, 0, 0),
+                      margin: const EdgeInsets.fromLTRB(15, 15, 0, 0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -281,7 +291,10 @@ class _AddCardState extends State<AddCard> {
                           Container(
                             margin: const EdgeInsets.fromLTRB(0, 15, 0, 0),
                             child: TextField(
-                              maxLength: 4,
+                              inputFormatters: [
+                                FilteringTextInputFormatter.digitsOnly,
+                                LengthLimitingTextInputFormatter(4),
+                              ],
                               keyboardType: TextInputType.number,
                               focusNode: CVV,
                               style:
@@ -349,8 +362,8 @@ class _AddCardState extends State<AddCard> {
                       ),
                     ],
                   ),
-                  margin: const EdgeInsets.only(top: 86, bottom: 5),
-                  height: MediaQuery.of(context).size.height * 0.30,
+                  margin: const EdgeInsets.only(top: 67, bottom: 5),
+                  height: MediaQuery.of(context).size.height * 0.28,
                   width: 359,
                   child: Container(
                     margin: const EdgeInsets.only(top: 20),
@@ -436,7 +449,7 @@ class _AddCardState extends State<AddCard> {
                   ),
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),

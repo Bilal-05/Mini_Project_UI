@@ -37,7 +37,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
           widget.screenName,
           style: const TextStyle(
               fontSize: 16,
-              fontWeight: FontWeight.w400,
+              fontWeight: FontWeight.w600,
               color: TextColors.textColor3),
         ),
       ],
