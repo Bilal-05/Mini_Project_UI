@@ -25,20 +25,20 @@ class _FirstCategoryContainerState extends State<FirstCategoryContainer> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              margin: const EdgeInsets.only(top: 63),
+              margin: const EdgeInsets.only(top: 25),
               child: FirstCategoryRow(
                 itemNumber: GetItemNumber.getItemNumber(),
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: 20),
+              margin: EdgeInsets.only(top: 0),
               child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     "Shop",
                     style: TextStyle(
-                      fontSize: 50,
+                      fontSize: 40,
                       fontWeight: FontWeight.w400,
                       color: TextColors.textColor1,
                     ),
@@ -49,7 +49,7 @@ class _FirstCategoryContainerState extends State<FirstCategoryContainer> {
                   Text(
                     "By Category",
                     style: TextStyle(
-                      fontSize: 50,
+                      fontSize: 40,
                       fontWeight: FontWeight.w700,
                       color: TextColors.textColor1,
                     ),
