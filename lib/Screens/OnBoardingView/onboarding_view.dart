@@ -3,6 +3,10 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:mini_project/Constants/colors.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+import '../MainMenuView/mainMenu_view.dart';
 
 class OnBoardingView extends StatefulWidget {
   const OnBoardingView({super.key});
@@ -12,6 +16,41 @@ class OnBoardingView extends StatefulWidget {
 }
 
 class _OnBoardingViewState extends State<OnBoardingView> {
+  bool onBoard = false;
+
+  @override
+  initState() {
+    super.initState();
+    fetchData();
+  }
+
+  fetchData() async {
+    await checkOnBoard();
+    if (onBoard == true) {
+      // ignore: use_build_context_synchronously
+      Navigator.push(
+        context,
+        PageTransition(
+          curve: Curves.linear,
+          type: PageTransitionType.rightToLeft,
+          child: const MainMenuView(),
+        ),
+      );
+    }
+  }
+
+  checkOnBoard() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    onBoard = prefs.getBool('onBoard') ?? onBoard;
+    setState(() {});
+  }
+
+  isOnBoard() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setBool('onBoard', true);
+    setState(() {});
+  }
+
   List<String> screenNo = ["One", "Two"];
   List<String> images = [
     "animations/shopping_phone.json",
@@ -20,108 +59,111 @@ class _OnBoardingViewState extends State<OnBoardingView> {
   int currentpage = 0;
   @override
   Widget build(BuildContext context) {
-    return PageView.builder(
-      itemCount: screenNo.length,
-      itemBuilder: (BuildContext context, int index) {
-        return Scaffold(
-          resizeToAvoidBottomInset: false,
-          backgroundColor: PrimaryColors.primaryBlue,
-          body: SafeArea(
-            child: Center(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                // mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Container(
-                    margin: const EdgeInsets.only(top: 20, left: 0),
-                    width: 300,
-                    height: 203,
-                    child: Center(
-                      child: Padding(
-                        padding: const EdgeInsets.only(right: 6),
-                        child: Text(
-                          "Your Holiday shopping delivered to Screen ${screenNo[index]}  🏕 ",
-                          style: const TextStyle(
-                              fontSize: 32,
-                              fontWeight: FontWeight.w700,
-                              fontFamily: "Manrope",
-                              color: TextColors.textColor1),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 294,
-                    height: 80,
-                    child: Padding(
-                      padding: const EdgeInsets.only(right: 22),
-                      child: Text(
-                        "There's something for everyone to enjoy with Sweet Shop Favourites Screen ${index + 1}",
-                        style: const TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w500,
-                            fontFamily: "Manrope",
-                            color: TextColors.textColor2),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: MediaQuery.of(context).size.width * .05,
-                  ),
-                  Container(
-                    child: currentpage == 0
-                        ? row2()
-                        : currentpage == 1
-                            ? row1()
-                            : const Text("data"),
-                  ),
-                  Container(
-                    margin: const EdgeInsets.symmetric(vertical: 20),
-                    height: MediaQuery.of(context).size.height * 0.3,
-                    width: MediaQuery.of(context).size.width * 0.7,
-                    child: Lottie.asset(images[index]),
-                  ),
-                  Container(
-                    margin: const EdgeInsets.symmetric(horizontal: 20),
-                    child: Hero(
-                      tag: 'onBoarding$index',
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: TextColors.textColor1,
-                          fixedSize: const Size(260, 70),
-                          shape: const RoundedRectangleBorder(
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(20),
+    return onBoard == false
+        ? PageView.builder(
+            itemCount: screenNo.length,
+            itemBuilder: (BuildContext context, int index) {
+              return Scaffold(
+                resizeToAvoidBottomInset: false,
+                backgroundColor: PrimaryColors.primaryBlue,
+                body: SafeArea(
+                  child: Center(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      // mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(top: 20, left: 0),
+                          width: 300,
+                          height: 203,
+                          child: Center(
+                            child: Padding(
+                              padding: const EdgeInsets.only(right: 6),
+                              child: Text(
+                                "Your Holiday shopping delivered to Screen ${screenNo[index]}  🏕 ",
+                                style: const TextStyle(
+                                    fontSize: 32,
+                                    fontWeight: FontWeight.w700,
+                                    fontFamily: "Manrope",
+                                    color: TextColors.textColor1),
+                              ),
                             ),
                           ),
                         ),
-                        onPressed: () {
-                          Navigator.pushNamed(context, '/firstscreen');
-                        },
-                        child: const Text(
-                          "Get Started →",
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontFamily: "Manrope",
-                            fontWeight: FontWeight.w600,
-                            color: TextColors.textColor3,
+                        Container(
+                          width: 294,
+                          height: 80,
+                          child: Padding(
+                            padding: const EdgeInsets.only(right: 22),
+                            child: Text(
+                              "There's something for everyone to enjoy with Sweet Shop Favourites Screen ${index + 1}",
+                              style: const TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w500,
+                                  fontFamily: "Manrope",
+                                  color: TextColors.textColor2),
+                            ),
                           ),
                         ),
-                      ),
+                        SizedBox(
+                          height: MediaQuery.of(context).size.width * .05,
+                        ),
+                        Container(
+                          child: currentpage == 0
+                              ? row2()
+                              : currentpage == 1
+                                  ? row1()
+                                  : const Text("data"),
+                        ),
+                        Container(
+                          margin: const EdgeInsets.symmetric(vertical: 20),
+                          height: MediaQuery.of(context).size.height * 0.3,
+                          width: MediaQuery.of(context).size.width * 0.7,
+                          child: Lottie.asset(images[index]),
+                        ),
+                        Container(
+                          margin: const EdgeInsets.symmetric(horizontal: 20),
+                          child: Hero(
+                            tag: 'onBoarding$index',
+                            child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: TextColors.textColor1,
+                                fixedSize: const Size(260, 70),
+                                shape: const RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(20),
+                                  ),
+                                ),
+                              ),
+                              onPressed: () {
+                                isOnBoard();
+                                Navigator.pushNamed(context, '/firstscreen');
+                              },
+                              child: const Text(
+                                "Get Started →",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontFamily: "Manrope",
+                                  fontWeight: FontWeight.w600,
+                                  color: TextColors.textColor3,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                ],
-              ),
-            ),
-          ),
-        );
-      },
-      onPageChanged: (index) {
-        setState(() {
-          currentpage = index;
-        });
-      },
-    );
+                ),
+              );
+            },
+            onPageChanged: (index) {
+              setState(() {
+                currentpage = index;
+              });
+            },
+          )
+        : const Scaffold();
   }
 }
 
